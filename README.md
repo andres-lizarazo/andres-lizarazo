@@ -56,7 +56,7 @@
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=TU_USUARIO&theme=radical&border_radius=4.5" />
+  <img src="https://streak-stats.demolab.com?user=andres-lizarazo&theme=radical&border_radius=4.5" />
 </p>
 
 ---
