@@ -1,11 +1,11 @@
 <h1 align="center">👋 ¡Hola! Soy Andrés Lizarazo</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=F7A41D&center=true&vCenter=true&width=600&lines=Cient%C3%ADfico+de+Datos;Apasionado+por+la+Inteligencia+Artificial;Experto+en+Python%2C+SQL+y+Power+BI;Transformando+datos+en+decisiones" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=F7A41D&center=true&vCenter=true&width=500&lines=Cient%C3%ADfico+de+Datos;Experto+en+Python%2C+SQL+y+Power+BI;Apasionado+por+el+Machine+Learning" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="350" />
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300" />
 </p>
 
 ---
@@ -44,16 +44,16 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=TU_USUARIO&show_icons=true&theme=radical" height="150"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TU_USUARIO&layout=compact&theme=radical" height="150"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=andres-lizarazo&show_icons=true&theme=radical" height="150"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=andres-lizarazo&layout=compact&theme=radical" height="150"/>
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=TU_USUARIO&theme=radical&margin-w=10&row=1" />
+  <img src="https://github-profile-trophy.vercel.app/?username=andres-lizarazo&theme=radical&margin-w=10&row=1" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=TU_USUARIO&theme=dracula" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=andres-lizarazo&theme=dracula" />
 </p>
 
 <p align="center">
@@ -75,13 +75,14 @@
 
 ---
 
-## 💬 Frase de impacto
+## 🚀 Abrazo el Aprendizaje Continuo
 
-> 🎯 *"Transformo datos en decisiones valiosas."*
+> *"Transformo datos en decisiones valiosas."*  
+> Siempre estoy aprendiendo nuevas tecnologías, técnicas de visualización y herramientas de inteligencia artificial para potenciar los datos.
 
 ---
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=TU_USUARIO&label=Profile+views&color=orange&style=flat" />
+  <img src="https://komarev.com/ghpvc/?username=andres-lizarazo&label=Profile+views&color=orange&style=flat" />
 </p>
 
