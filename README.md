@@ -52,8 +52,6 @@
 
 ![Trophies](https://github-profile-trophy.vercel.app/?username=andres-lizarazo&theme=radical)
 
-[![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=andres-lizarazo&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
 </div>
 
 ---
