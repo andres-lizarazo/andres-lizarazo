@@ -1,5 +1,4 @@
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1000&color=31DFF7&width=435&lines=%F0%9F%91%8B+%C2%A1Hola!+Soy+Andr%C3%A9s+Lizarazo" alt="Typing SVG" /></a>
-
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=36&pause=1000&color=31DFF7&width=435&lines=%F0%9F%91%8B+%C2%A1Hola!+Soy+Andr%C3%A9s+Lizarazo" alt="Typing SVG" /></a>
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=F7A41D&center=true&vCenter=true&width=500&lines=Cient%C3%ADfico+de+Datos;Experto+en+Python%2C+SQL+y+Power+BI;Apasionado+por+el+Machine+Learning" alt="Typing SVG" />
 </p>
