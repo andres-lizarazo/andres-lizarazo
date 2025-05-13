@@ -2,11 +2,8 @@
 ---
 <h1 align="center">
 👋 ¡Hola! Soy Andres Lizarazo
-
-🎯 **Científico de Datos | Analista de Datos**  
-📍 Colombia Bogotá 
-
 </h1>
+
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=F7A41D&center=true&vCenter=true&width=500&lines=Cient%C3%ADfico+de+Datos;Experto+en+Python%2C+SQL+y+Power+BI;Apasionado+por+el+Machine+Learning" alt="Typing SVG" />
@@ -16,6 +13,10 @@
   <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300" />
 </p>
 
+<h2 align="center">
+🎯 Científico de Datos | Analista de Datos
+📍 Colombia Bogotá 
+</h2>
 
 ## 🧠 Habilidades Técnicas
 
