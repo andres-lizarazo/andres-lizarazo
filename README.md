@@ -7,6 +7,18 @@
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F75C7E&center=true&vCenter=true&width=435&lines=Hola%2C+soy+analista+de+datos;Experto+en+SQL%2C+Python+y+Power+BI;Amante+de+la+ciencia+de+datos)
 
+<h1 align="center">
+  👋 ¡Hola! Soy [Tu Nombre]
+</h1>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=F7A41D&center=true&vCenter=true&width=500&lines=Cient%C3%ADfico+de+Datos;Experto+en+Python%2C+SQL+y+Power+BI;Apasionado+por+el+Machine+Learning" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300" />
+</p>
+
 
 ## 🧠 Habilidades Técnicas
 
