@@ -1,14 +1,14 @@
-# 👋 ¡Hola! Soy Andres Lizarazo
-
-🎯 **Científico de Datos | Analista de Datos**  
-📍 Colombia Bogotá 
 
 ---
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F75C7E&center=true&vCenter=true&width=435&lines=Hola%2C+soy+analista+de+datos;Experto+en+SQL%2C+Python+y+Power+BI;Amante+de+la+ciencia+de+datos)
 
 <h1 align="center">
-  👋 ¡Hola! Soy [Tu Nombre]
+👋 ¡Hola! Soy Andres Lizarazo
+
+🎯 **Científico de Datos | Analista de Datos**  
+📍 Colombia Bogotá 
+
 </h1>
 
 <p align="center">
