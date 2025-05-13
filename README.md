@@ -50,7 +50,6 @@
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=andres-lizarazo&show_icons=true&theme=radical&hide_title=false)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=andres-lizarazo&layout=compact&theme=radical)
 
-![GitHub Streak](https://streak-stats.demolab.com?user=andres-lizarazo&theme=radical)
 ![Trophies](https://github-profile-trophy.vercel.app/?username=andres-lizarazo&theme=radical)
 
 [![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=andres-lizarazo&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
