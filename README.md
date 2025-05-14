@@ -22,7 +22,7 @@
 
 ## 🧠 Sobre mí
 <img align='right' src="/cat.gif" height="" width="200" alt="coding cat">
-📍 Soy **Andrés Lizarazo**, Científico de Datos de Bogotá, Colombia. Me especializo en transformar datos en información accionable a través de análisis exploratorios, visualización de datos e implementación de modelos predictivos. Mi pasión está en aplicar ciencia de datos para resolver problemas reales y generar impacto.
+📍 Soy Andrés Lizarazo, Científico de Datos de Bogotá, Colombia. Me especializo en transformar datos en información accionable a través de análisis exploratorios, visualización de datos e implementación de modelos predictivos. Mi pasión está en aplicar ciencia de datos para resolver problemas reales y generar impacto.
 
 ---
 
