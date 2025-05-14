@@ -1,5 +1,5 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1000&color=31DFF7&width=560&lines=%F0%9F%91%8B+%C2%A1Hola!+Soy+Andr%C3%A9s+Lizarazo" alt="Typing SVG" /></a>
-<img align='right' src="/cat.gif" height="" width="300" alt="coding cat">
+
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=117BFFFF&center=true&vCenter=true&width=500&lines=Cient%C3%ADfico+de+Datos;Experto+en+Python%2C+SQL+y+Power+BI;Apasionado+por+el+Machine+Learning" alt="Typing SVG" />
@@ -21,7 +21,7 @@
 ---
 
 ## 🧠 Sobre mí
-
+<img align='right' src="/cat.gif" height="" width="300" alt="coding cat">
 📍 Soy **Andrés Lizarazo**, Científico de Datos de Bogotá, Colombia. Me especializo en transformar datos en información accionable a través de análisis exploratorios, visualización de datos e implementación de modelos predictivos. Mi pasión está en aplicar ciencia de datos para resolver problemas reales y generar impacto.
 
 ---
