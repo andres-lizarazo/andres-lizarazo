@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100" />
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="400" />
 </p>
 
 <div>
@@ -21,7 +21,7 @@
 ---
 
 ## 🧠 Sobre mí
-<img align='right' src="/cat.gif" height="" width="300" alt="coding cat">
+<img align='right' src="/cat.gif" height="" width="200" alt="coding cat">
 📍 Soy **Andrés Lizarazo**, Científico de Datos de Bogotá, Colombia. Me especializo en transformar datos en información accionable a través de análisis exploratorios, visualización de datos e implementación de modelos predictivos. Mi pasión está en aplicar ciencia de datos para resolver problemas reales y generar impacto.
 
 ---
