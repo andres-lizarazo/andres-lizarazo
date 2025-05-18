@@ -70,6 +70,30 @@
   <img src="https://streak-stats.demolab.com?user=andres-lizarazo&theme=radical&border_radius=4.5" />
 </p>
 
+ ---
+<p align="center">
+  <img alt="Stats" src="https://github-readme-stats.vercel.app/api?username=andres-lizarazo&count_private=true&show_icons=true&locale=es&include_all_commits=true&title_color=246bce&text_color=ffffff&bg_color=0d1117&hide_border=true&hide_title=false" />
+  <a href="[https://github.com/andres-lizarazo/](https://espcustoms.xyz)">
+    <img align="left" width="45%" src="https://github.com/andres-lizarazo/andres-lizarazo/blob/main/metrics-left.svg">
+  </a>
+  <a href="[https://github.com/andres-lizarazo/](https://espcustoms.xyz)">
+    <img align="right" width="45%" src="https://github.com/andres-lizarazo/andres-lizarazo/blob/main/metrics-right.svg">
+  </a>
+</p>
+
+<br />
+<br />
+
+<p align="center">
+  <a href="https://andres-lizarazo.com/">
+    <img align="right" width="50%" alt="andres-lizarazo's wakatime stats" src="https://github-readme-stats.vercel.app/api/wakatime?username=andres-lizarazo&layout=compact&show_icons=true&locale=es&title_color=246bce&text_color=ffffff&bg_color=0d1117&include_all_commits=true&hide_border=true&hide_title=false" />
+  </a>
+  <a href="https://discord.com/users/360881334647914506">
+    <img align="right" width="50%" src="https://lanyard.cnrad.dev/api/360881334647914506?hideDiscrim=false&hideStatus=false&hideTimestamp=false">
+  </a>
+  <img align="left" src="http://invidget.switchblade.xyz/cqrN3Eg?language=es">     
+</p>
+
 ---
 
 ## 🌐 Conecta conmigo
