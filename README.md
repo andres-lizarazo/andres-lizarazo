@@ -71,13 +71,39 @@
 </p>
 
  ---
+
+[bot]: https://espcustoms.xyz
+[website]: https://srgobi.com
+[youtube]: https://youtube.com/c/SrGobi
+[twitter]: https://twitter.com/SrgobiY
+[discord]: https://discord.gg/cqrN3Eg
+[twitch]: https://www.twitch.tv/srgobiy
+[patreon]: https://www.patreon.com/espcustoms
+[instagram]: https://www.instagram.com/srgobi_oficial/
+<hr />
+
+### Follow me:
+
+[<img align="left" alt="Website" width="32px" src="https://api.iconify.design/noto-v1:robot.svg?&height=32" />][bot]
+[<img align="left" alt="Website" width="32px" src="https://api.iconify.design/emojione:globe-showing-europe-africa.svg?&height=32" />][website]
+[<img align="left" alt="Youtube" width="36px" src="https://api.iconify.design/logos:youtube-icon.svg?&height=36" />][youtube]
+[<img align="left" alt="Twitter" width="32px" src="https://api.iconify.design/logos:twitter.svg?&height=32" />][twitter]
+[<img align="left" alt="Discord" width="36px" src="https://api.iconify.design/logos:discord-icon.svg?&height=36" />][discord]
+[<img align="left" alt="Twitch" width="32px" src="https://api.iconify.design/logos:twitch.svg?&height=32" />][twitch]
+[<img align="left" alt="Patreon" width="32px" src="https://api.iconify.design/logos:patreon.svg?&height=32" />][patreon]
+[<img align="left" alt="Instagram" width="32px" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" />][instagram]
+
+<br />
+<br />
+<hr />
+
 <p align="center">
   <img alt="Stats" src="https://github-readme-stats.vercel.app/api?username=andres-lizarazo&count_private=true&show_icons=true&locale=es&include_all_commits=true&title_color=246bce&text_color=ffffff&bg_color=0d1117&hide_border=true&hide_title=false" />
-  <a href="[https://github.com/andres-lizarazo/](https://espcustoms.xyz)">
-    <img align="left" width="45%" src="https://github.com/andres-lizarazo/andres-lizarazo/blob/main/metrics-left.svg">
+  <a href="[https://github.com/SrGobi/](https://espcustoms.xyz)">
+    <img align="left" width="45%" src="https://github.com/SrGobi/SrGobi/blob/main/metrics-left.svg">
   </a>
-  <a href="[https://github.com/andres-lizarazo/](https://espcustoms.xyz)">
-    <img align="right" width="45%" src="https://github.com/andres-lizarazo/andres-lizarazo/blob/main/metrics-right.svg">
+  <a href="[https://github.com/SrGobi/](https://espcustoms.xyz)">
+    <img align="right" width="45%" src="https://github.com/SrGobi/SrGobi/blob/main/metrics-right.svg">
   </a>
 </p>
 
@@ -85,15 +111,14 @@
 <br />
 
 <p align="center">
-  <a href="https://andres-lizarazo.com/">
-    <img align="right" width="50%" alt="andres-lizarazo's wakatime stats" src="https://github-readme-stats.vercel.app/api/wakatime?username=andres-lizarazo&layout=compact&show_icons=true&locale=es&title_color=246bce&text_color=ffffff&bg_color=0d1117&include_all_commits=true&hide_border=true&hide_title=false" />
+  <a href="https://srgobi.com/">
+    <img align="right" width="50%" alt="SrGobi's wakatime stats" src="https://github-readme-stats.vercel.app/api/wakatime?username=andres-lizarazo&layout=compact&show_icons=true&locale=es&title_color=246bce&text_color=ffffff&bg_color=0d1117&include_all_commits=true&hide_border=true&hide_title=false" />
   </a>
   <a href="https://discord.com/users/360881334647914506">
     <img align="right" width="50%" src="https://lanyard.cnrad.dev/api/360881334647914506?hideDiscrim=false&hideStatus=false&hideTimestamp=false">
   </a>
   <img align="left" src="http://invidget.switchblade.xyz/cqrN3Eg?language=es">     
 </p>
-
 ---
 
 ## 🌐 Conecta conmigo
