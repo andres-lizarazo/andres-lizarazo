@@ -14,7 +14,7 @@
 
 ![](https://img.shields.io/github/followers/andres-lizarazo?label=follow&logo=github&style=flat-square)
 ![GitHub User's stars](https://img.shields.io/github/stars/andres-lizarazo?label=%E2%AD%90GitHub%20stars&style=flat-square)
-![](https://komarev.com/ghpvc/?username=andres-lizarazo&style=flat-square&color=ff69b4)
+![](https://komarev.com/ghpvc/?username=andres-lizarazo&style=flat-square&color=orange)
 
 </div>
 
@@ -92,9 +92,6 @@
 
 ---
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=andres-lizarazo&label=Profile+views&color=orange&style=flat" />
-</p>
 
 
 
