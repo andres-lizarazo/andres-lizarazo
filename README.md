@@ -1,4 +1,4 @@
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1000&color=31DFF7&width=560&lines=%F0%9F%91%8B+%C2%A1Hola!+Soy+Andr%C3%A9s+Lizarazo" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1000&color=31DFF7&width=560&lines=%F0%9F%91%8B+%C2%A1Hola!+I'm+Andr%C3%A9s+Lizarazo" alt="Typing SVG" /></a>
 
 
 <p align="center">
@@ -20,24 +20,25 @@
 
 ---
 
-## 🧠 Sobre mí
-<img align='right' src="/cat.gif" height="" width="200" alt="coding cat">
-📍 Soy Andrés Lizarazo, Científico de Datos de Bogotá, Colombia. Me especializo en transformar datos en información accionable a través de análisis exploratorios, visualización de datos e implementación de modelos predictivos. Mi pasión está en aplicar ciencia de datos para resolver problemas reales y generar impacto.
+## 🧠 About Me
+<img align='right' src="/cat.gif" width="200" alt="coding cat">
+
+📍 I'm Andrés Lizarazo, a Data Engineer from Bogotá, Colombia. I specialize in transforming raw data into actionable insights through data pipelines, exploratory analysis, data visualization, and scalable data solutions. I'm passionate about applying data engineering to solve real-world problems and drive meaningful impact.
+---
+
+## 💼 Technical Skills
+
+- 📊 **Data Analysis & Visualization:** SQL, Power BI, Advanced Excel, Tableau  
+- 🐍 **Languages:** Python  
+- 🧰 **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow  
+- 🤖 **Machine Learning & Predictive Modeling**  
+- 🧹 **Data Cleaning, Preparation & Automation**  
+- 📦 **Real-World Data Analysis Projects**  
+- ☁️ **Cloud Platforms:** Google Cloud Platform (BigQuery, Cloud Functions, Cloud SQL), Microsoft Azure (Azure Machine Learning, Azure Data Studio)
 
 ---
 
-## 💼 Habilidades Técnicas
-
-- 📊 **Análisis y Visualización de Datos:** SQL, Power BI, Excel Avanzado, Tableau  
-- 🐍 **Lenguajes:** Python  
-- 🧰 **Librerías:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow  
-- 🤖 **Machine Learning & Modelado Predictivo**  
-- 🧹 **Automatización, Limpieza y Preparación de Datos**  
-- 📦 **Proyectos de Análisis de Datos del Mundo Real**
-
----
-
-## 🛠️ Lenguajes y Herramientas
+## 🛠️ Languages & Tools
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -47,8 +48,9 @@
   <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" />
   <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
   <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/Microsoft%20Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
 </p>
-
 ---
 
 ## 📊 GitHub Stats
@@ -72,7 +74,7 @@
 
  ---
 
-## 🌐 Conecta conmigo
+## 🌐 Connect with me
 
 <p align="center">
   <a href="https://linkedin.com/in/andreslizarazo" target="_blank">
@@ -84,11 +86,10 @@
 </p>
 
 ---
+## 🚀 Embracing Continuous Learning
 
-## 🚀 Abrazo el Aprendizaje Continuo
-
-> *"Transformo datos en decisiones valiosas."*  
-> Siempre estoy aprendiendo nuevas tecnologías, técnicas de visualización y herramientas de inteligencia artificial para potenciar los datos.
+> *"I turn data into valuable decisions."*  
+> I'm always learning new technologies, visualization techniques, and AI tools to unlock the full potential of data.
 
 ---
 
