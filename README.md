@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=117BFFFF&center=true&vCenter=true&width=500&lines=Cient%C3%ADfico+de+Datos;Experto+en+Python%2C+SQL+y+Power+BI;Apasionado+por+el+Machine+Learning" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=117BFFFF&center=true&vCenter=true&width=500&lines=Ingeniero+de+Datos;Experto+en+Python%2C+SQL,Apasionado+por+el+Machine+Learning" alt="Typing SVG" />
 </p>
 
 <p align="center">
