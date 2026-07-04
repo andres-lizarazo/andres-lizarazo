@@ -49,7 +49,6 @@ I'm a **Data Engineer** focused on building scalable data pipelines and analytic
 <p>
   <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud" />
   <img src="https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=googlebigquery&logoColor=white" alt="BigQuery" />
-  <img src="https://img.shields.io/badge/Microsoft%20Azure-0078D4?style=for-the-badge&logoColor=white" alt="Microsoft Azure" />
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
 </p>
 
@@ -60,13 +59,6 @@ I'm a **Data Engineer** focused on building scalable data pipelines and analytic
   <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau" />
   <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Excel" />
   <img src="https://img.shields.io/badge/Matplotlib%20%2F%20Seaborn-11557C?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib / Seaborn" />
-</p>
-
-**Machine Learning**
-
-<p>
-  <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Scikit-learn" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
 </p>
 
 **Tools**
@@ -98,6 +90,10 @@ I'm a **Data Engineer** focused on building scalable data pipelines and analytic
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=andres-lizarazo&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=andres-lizarazo&theme=tokyo-night&hide_border=true&area=true" alt="Contribution activity graph" />
 </p>
 
 ---
