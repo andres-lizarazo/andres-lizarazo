@@ -96,6 +96,12 @@ I'm a **Data Engineer** focused on building scalable data pipelines and analytic
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=andres-lizarazo&theme=tokyo-night&hide_border=true&area=true" alt="Contribution activity graph" />
 </p>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/andres-lizarazo/andres-lizarazo/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/andres-lizarazo/andres-lizarazo/output/github-snake-light.svg" />
+  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/andres-lizarazo/andres-lizarazo/output/github-snake-dark.svg" />
+</picture>
+
 ---
 
 ## 🌐 Connect With Me
