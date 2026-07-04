@@ -120,7 +120,3 @@ I'm a **Data Engineer** based in Bogotá, Colombia, specialized in building scal
 </p>
 
 ---
-
-<p align="center">
-  <i>"I turn data into decisions."</i>
-</p>
