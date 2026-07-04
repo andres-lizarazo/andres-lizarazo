@@ -23,11 +23,11 @@
 
 ## 🧠 About Me
 
-I'm a **Data Engineer** focused on building scalable data pipelines and analytics solutions that turn raw data into business decisions. I work across the full data lifecycle — ingestion, transformation, modeling, and visualization — designing **ETL/ELT pipelines**, **lakehouse architectures**, and **BI dashboards** that solve real-world problems.
+I'm a **Data Engineer** based in Bogotá, Colombia, specialized in building scalable data pipelines and analytics solutions that turn raw data into business decisions. I work across the full data lifecycle — ingestion, transformation, modeling, and visualization — designing **ETL/ELT pipelines**, **lakehouse architectures**, and **BI dashboards** that drive real business impact.
 
-- 🔭 Currently working on distributed data processing with **PySpark** and **Databricks**
-- 📈 Passionate about data modeling, warehousing, and analytics engineering
-- 🌱 Always learning: streaming pipelines, data quality, and MLOps
+- Currently working with **PySpark** and **Databricks** for large-scale, distributed data processing
+- Strong foundation in data modeling, warehousing, and analytics engineering on **Google Cloud**
+- Exploring streaming pipelines, data quality frameworks, and MLOps
 
 ---
 
@@ -90,6 +90,10 @@ I'm a **Data Engineer** focused on building scalable data pipelines and analytic
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=andres-lizarazo&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=andres-lizarazo&theme=tokyonight&utcOffset=-5" alt="Commits per hour of day (UTC-5)" height="200" />
 </p>
 
 <p align="center">
