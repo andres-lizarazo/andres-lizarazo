@@ -1,11 +1,8 @@
-<h1 align="center">Hi, I'm Andrés Lizarazo 👋</h1>
+<h1 align="center">Andrés Lizarazo</h1>
 
 <p align="center">
-  <b>Data Engineer · Bogotá, Colombia 🇨🇴</b>
-</p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3500&pause=1000&color=2496ED&center=true&vCenter=true&width=600&lines=Data+Engineering+%C2%B7+Analytics;PySpark+%C2%B7+Databricks+%C2%B7+SQL;Turning+raw+data+into+decisions" alt="Typing SVG" />
+  <b>BI &amp; Analytics Manager · Bogotá, Colombia</b><br />
+  Trusted reporting, reusable data products, and clear decisions.
 </p>
 
 <p align="center">
@@ -15,33 +12,44 @@
   <a href="https://andres-lizarazo.github.io/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-333?style=flat-square&logo=github&logoColor=white" alt="Portfolio" />
   </a>
-  <img src="https://img.shields.io/github/followers/andres-lizarazo?label=Followers&logo=github&style=flat-square" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=andres-lizarazo&style=flat-square&color=blue" alt="Profile views" />
 </p>
 
 ---
 
-## 🧠 About Me
+## About
 
-I'm a **Data Engineer** based in Bogotá, Colombia, specialized in building scalable data pipelines and analytics solutions that turn raw data into business decisions. I work across the full data lifecycle — ingestion, transformation, modeling, and visualization — designing **ETL/ELT pipelines**, **lakehouse architectures**, and **BI dashboards** that drive real business impact.
+I'm a BI & Analytics Manager with 5+ years in data, across commercial, analytics, and data engineering roles. I'm an Industrial Engineer by training, so I start with the business decision and work back to the data.
 
-- Currently working with **PySpark** and **Databricks** for large-scale, distributed data processing
-- Strong foundation in data modeling, warehousing, and analytics engineering on **Google Cloud**
-- Exploring streaming pipelines, data quality frameworks, and MLOps
+Today I work between US-based clients and an analytics team in Bogotá, turning business questions into reporting people can rely on. I'm currently deepening my skills in the Azure data platform, Spark, and Databricks.
 
 ---
 
-## 🛠️ Tech Stack
+## What I Focus On
 
-**Data Engineering**
+- **Data quality:** zero-defect reporting, with dashboards reconciled against their raw sources
+- **Data management:** governance, taxonomy, and shared metric definitions
+- **Data products:** turning one-off requests into reusable solutions
+- **Stakeholder alignment:** clear scope, priorities, and communication between clients and technical teams
+
+---
+
+## Selected Results
+
+- Grew e-commerce category sales by 30% with a strategy I proposed and ran end to end
+- Cut inventory write-off costs by 20% by improving how damages were recorded in distribution centers
+- Built ETL pipelines on Google Cloud and BigQuery processing 100M+ records from 10+ sources
+
+---
+
+## Tech Stack
+
+**BI & Analytics**
 
 <p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" alt="PySpark" />
-  <img src="https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white" alt="Databricks" />
-  <img src="https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL" />
-  <img src="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white" alt="Apache Airflow" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge" alt="Power BI" />
+  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge" alt="Tableau" />
+  <img src="https://img.shields.io/badge/Looker-4285F4?style=for-the-badge&logo=looker&logoColor=white" alt="Looker" />
+  <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge" alt="Excel" />
 </p>
 
 **Cloud & Warehousing**
@@ -49,16 +57,18 @@ I'm a **Data Engineer** based in Bogotá, Colombia, specialized in building scal
 <p>
   <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud" />
   <img src="https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=googlebigquery&logoColor=white" alt="BigQuery" />
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge" alt="Azure" />
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
 </p>
 
-**Analytics & Visualization**
+**Data Engineering**
 
 <p>
-  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
-  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau" />
-  <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Excel" />
-  <img src="https://img.shields.io/badge/Matplotlib%20%2F%20Seaborn-11557C?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib / Seaborn" />
+  <img src="https://img.shields.io/badge/SQL-025E8C?style=for-the-badge" alt="SQL" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+  <img src="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white" alt="Apache Airflow" />
+  <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n" />
 </p>
 
 **Tools**
@@ -72,32 +82,10 @@ I'm a **Data Engineer** based in Bogotá, Colombia, specialized in building scal
 
 ---
 
-## 🚀 What I Do
-
-- ⚙️ **Data pipelines** — design and build batch ETL/ELT pipelines with Python, PySpark, and Airflow
-- 🏗️ **Data modeling & warehousing** — dimensional models, lakehouse architectures, and query optimization
-- 📊 **Analytics & dashboarding** — actionable dashboards and reports with Power BI and Tableau
-- 🤖 **ML-assisted analysis** — predictive modeling and exploratory analysis to support decision-making
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=andres-lizarazo&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" height="150" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=andres-lizarazo&theme=tokyonight&hide_border=true&layout=compact" height="150" alt="Top languages" />
-</p>
+## GitHub Activity
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=andres-lizarazo&theme=tokyonight&hide_border=true" alt="GitHub streak" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=andres-lizarazo&theme=tokyonight&utcOffset=-5" alt="Commits per hour of day (UTC-5)" height="200" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=andres-lizarazo&theme=tokyo-night&hide_border=true&area=true" alt="Contribution activity graph" />
 </p>
 
 <picture>
@@ -105,18 +93,3 @@ I'm a **Data Engineer** based in Bogotá, Colombia, specialized in building scal
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/andres-lizarazo/andres-lizarazo/output/github-snake-light.svg" />
   <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/andres-lizarazo/andres-lizarazo/output/github-snake-dark.svg" />
 </picture>
-
----
-
-## 🌐 Connect With Me
-
-<p align="center">
-  <a href="https://linkedin.com/in/andreslizarazo" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://andres-lizarazo.github.io/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-333?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio" />
-  </a>
-</p>
-
----
