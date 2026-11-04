@@ -3,5 +3,6 @@ Allow: /
 Disallow: /api/
 Disallow: /gracias
 Disallow: /compra-exitosa
+Disallow: /admin
 
 Sitemap: https://rutaanalista.com/sitemap.xml

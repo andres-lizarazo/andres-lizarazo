@@ -9,7 +9,10 @@ const t = es.hero;
   <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-40" style="background: radial-gradient(60rem 30rem at 85% -10%, rgba(15,118,110,.55), transparent 60%), radial-gradient(40rem 24rem at -10% 110%, rgba(250,204,21,.18), transparent 60%);"></div>
   <div class="container-page relative flex items-center justify-between py-5">
     <Logo light />
-    <a href="#precio" class="hidden rounded-lg border border-white/25 px-4 py-2 text-sm font-semibold hover:bg-white/10 sm:inline-block">Ver precio</a>
+    <nav aria-label="Principal" class="flex items-center gap-4 text-sm font-semibold">
+      <a href="/blog" class="text-slate-200 hover:text-white">Blog</a>
+      <a href="#precio" class="hidden rounded-lg border border-white/25 px-4 py-2 hover:bg-white/10 sm:inline-block">Ver precio</a>
+    </nav>
   </div>
 
   <div id="contenido" class="container-page relative grid items-center gap-10 pb-16 pt-6 md:grid-cols-[1.3fr_.7fr] md:pb-24 md:pt-10">

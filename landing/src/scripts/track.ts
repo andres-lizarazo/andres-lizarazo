@@ -3,6 +3,7 @@
 // - Decora los botones de compra con src/sck/email/name para Hotmart.
 // - Registra el clic en "comprar" con sendBeacon a /api/track.
 import { buildCheckoutUrl } from '../lib/checkout';
+import { sourceFromReferrer } from '../lib/attribution';
 
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'] as const;
 type Attribution = Partial<Record<(typeof UTM_KEYS)[number] | 'referrer' | 'landing_path', string>>;
@@ -70,6 +71,14 @@ function captureAttribution(): Attribution {
   if (!current.utm_source && shortcut) current.utm_source = shortcut.slice(0, 100);
 
   const ref = document.referrer && !document.referrer.startsWith(window.location.origin) ? document.referrer.slice(0, 300) : '';
+  // Sin UTM ni ?ref=: deducimos la fuente del referrer (Google → orgánico, LinkedIn → social…)
+  if (!current.utm_source) {
+    const fromRef = sourceFromReferrer(ref, window.location.hostname);
+    if (fromRef) {
+      current.utm_source = fromRef.source;
+      current.utm_medium = current.utm_medium || fromRef.medium;
+    }
+  }
   const first = readJSON<Attribution>(local, 'ra_first');
   if (!first) {
     const initial: Attribution = { ...current, referrer: ref, landing_path: window.location.pathname };

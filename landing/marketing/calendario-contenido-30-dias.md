@@ -3,6 +3,12 @@
 **Objetivo:** llevar gente a `/gratis` (lead magnet) y desde ahí al kit.
 **Ritmo sostenible:** 5 posts de LinkedIn, 4 videos cortos y 1 video largo por semana. Graba en bloque: 1 tarde por semana para los videos y 1 mañana para escribir los posts.
 
+**Material ya listo:**
+
+- 4 carruseles en PDF con el texto de cada post: [`carruseles/`](carruseles/README.md).
+- Guiones de los 4 videos largos de YouTube: [`guiones-youtube.md`](guiones-youtube.md).
+- 10 artículos del blog para compartir (uno por semana, con su imagen propia): `rutaanalista.com/blog`.
+
 ## Links con UTM (copia y pega)
 
 | Canal | Link |
@@ -29,7 +35,7 @@ Atajo: `rutaanalista.com/gratis?ref=tiktok` también funciona y se guarda como f
 |---|---|---|---|---|
 | 1 | LinkedIn | Historia | "Soy Ingeniero Industrial. Hoy soy BI & Analytics Manager con clientes en EE.UU. Estas 5 cosas me habría gustado saber al empezar." | Comenta SQL |
 | 1 | TikTok/Reels | Pantalla | "La consulta SQL que más me piden en el trabajo" (ingreso por mes, ejercicio 5) | Link en bio |
-| 2 | LinkedIn | Carrusel PDF | "5 errores de SQL que veo en pruebas técnicas" (COUNT vs COUNT DISTINCT, WHERE vs HAVING, promedio de porcentajes…) | Comenta SQL |
+| 2 | LinkedIn | Carrusel PDF | "5 errores de SQL que más se repiten en pruebas técnicas". **Listo:** [`carrusel-1-errores-sql.pdf`](carruseles/carrusel-1-errores-sql.pdf) | Comenta SQL |
 | 3 | LinkedIn | Texto corto | "Un portafolio con el Titanic no te diferencia. Haz esto en su lugar:" (estructura del email 3) | Link en comentario |
 | 3 | TikTok/Reels | Cara a cámara | "Por qué no te llaman a entrevistas aunque sepas SQL" (30 s) | Link en bio |
 | 4 | LinkedIn | Encuesta | "¿Qué te cuesta más para conseguir tu primer trabajo en datos? SQL / Portafolio / CV / Entrevistas" | — |
@@ -44,7 +50,7 @@ Atajo: `rutaanalista.com/gratis?ref=tiktok` también funciona y se guarda como f
 |---|---|---|---|---|
 | 8 | LinkedIn | Historia de resultado | "Bajamos 20% las pérdidas de inventario. No con IA: cambiando cómo se registraban los daños." | Comenta DATOS |
 | 8 | TikTok/Reels | Pantalla | "Top 3 por categoría con ROW_NUMBER" (ejercicio 12) | Link en bio |
-| 9 | LinkedIn | Carrusel | "Cómo explicar un análisis a un gerente en 3 frases" | Link en comentario |
+| 9 | LinkedIn | Carrusel PDF | "Cómo explicar un análisis a un gerente en 3 frases". **Listo:** [`carrusel-2-explicar-a-un-gerente.pdf`](carruseles/carrusel-2-explicar-a-un-gerente.pdf) | Comenta SQL |
 | 10 | LinkedIn | Convocatoria | "Busco 10 personas que estén buscando su primer empleo en datos para probar gratis un kit nuevo a cambio de feedback honesto" | Comenta YO |
 | 10 | TikTok/Reels | Cara a cámara | "Lo que miro primero en un CV de analista" | Link en bio |
 | 11 | LinkedIn | Texto | "El dashboard más útil que hice tenía 3 números. Te explico por qué." | — |
@@ -73,13 +79,14 @@ Atajo: `rutaanalista.com/gratis?ref=tiktok` también funciona y se guarda como f
 |---|---|---|---|---|
 | 22 | LinkedIn | Resultados | "Primer mes de Ruta Analista: lo que aprendí vendiendo un producto digital" (números reales) | — |
 | 22 | TikTok/Reels | Pantalla | "Detecta emails duplicados con LOWER y TRIM" | Link en bio |
-| 23 | LinkedIn | Carrusel | "8 semanas para tu primer empleo en datos: el plan semana a semana" (resumen de la ruta) | Comenta RUTA |
+| 23 | LinkedIn | Carrusel PDF | "8 semanas para tu primer empleo en datos". **Listo:** [`carrusel-3-ruta-8-semanas.pdf`](carruseles/carrusel-3-ruta-8-semanas.pdf) | Comenta RUTA |
 | 24 | LinkedIn | Opinión | "Los certificados no te consiguen trabajo. Los proyectos sí." | Link al kit |
 | 24 | TikTok/Reels | Cara a cámara | "3 preguntas de entrevista en inglés que siempre hacen" | Link en bio |
 | 25 | LinkedIn | Colaboración | Live o post en conjunto con otro creador de datos | Cupón |
 | 26 | LinkedIn | Historia | Caso de un comprador (con permiso) | Link al kit |
 | 26 | TikTok/Reels | Pantalla | "Margen por categoría: por qué vender más no siempre es ganar más" | Link en bio |
 | 27 | YouTube | Video largo | "Proyecto de inventario: cómo encontrar dónde se pierde la plata" | Link en descripción |
+| 29 | LinkedIn | Carrusel PDF | "4 funciones de ventana que te preguntan en entrevistas". **Listo:** [`carrusel-4-funciones-de-ventana.pdf`](carruseles/carrusel-4-funciones-de-ventana.pdf) | Comenta SQL |
 
 ## Guion modelo: video corto de 35 segundos
 

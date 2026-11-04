@@ -1,0 +1,113 @@
+---
+import { render } from 'astro:content';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import Base from '../../layouts/Base.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import Footer from '../../components/Footer.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import { getPosts, formatDate, type Post } from '../../lib/blog';
+import { site } from '../../config/site';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post, i) => ({
+    params: { slug: post.id },
+    props: { post, related: [posts[(i + 1) % posts.length], posts[(i + 2) % posts.length]].filter((p) => p.id !== post.id) },
+  }));
+}
+
+interface Props { post: Post; related: Post[] }
+const { post, related } = Astro.props;
+const { Content } = await render(post);
+const url = new URL(`/blog/${post.id}`, site.url).toString();
+const formId = `blog-${post.id}`.slice(0, 40);
+// Imagen para compartir propia (npm run og:blog); si no existe, la general del sitio.
+const ownOg = `/og/blog/${post.id}.png`;
+const ogImage = existsSync(join(process.cwd(), 'public', ownOg)) ? ownOg : '/og.png';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.data.title,
+    description: post.data.description,
+    datePublished: post.data.date.toISOString(),
+    dateModified: (post.data.updated ?? post.data.date).toISOString(),
+    author: { '@type': 'Person', name: site.author.name, jobTitle: site.author.role, url: site.author.linkedin },
+    publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', site.url).toString() } },
+    image: new URL(ogImage, site.url).toString(),
+    mainEntityOfPage: url,
+    inLanguage: 'es',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: site.url },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: new URL('/blog', site.url).toString() },
+      { '@type': 'ListItem', position: 3, name: post.data.title, item: url },
+    ],
+  },
+];
+---
+<Base title={`${post.data.title} · Ruta Analista`} description={post.data.description} ogImage={ogImage} ogType="article">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <SiteHeader />
+  <main id="contenido" class="container-page max-w-3xl py-10">
+    <nav aria-label="Ruta de navegación" class="text-sm text-muted">
+      <a href="/" class="hover:text-brand">Inicio</a>{' '}<span aria-hidden="true">›</span>{' '}<a href="/blog" class="hover:text-brand">Blog</a>
+    </nav>
+    <article>
+      <header class="mt-4">
+        <h1 class="text-[2rem] font-black leading-tight tracking-tight text-balance sm:text-[2.6rem]">{post.data.title}</h1>
+        <p class="mt-4 text-lg leading-relaxed text-muted">{post.data.description}</p>
+        <p class="mt-4 text-sm text-muted">
+          Por <a href={site.author.linkedin} target="_blank" rel="noopener" class="font-semibold text-ink hover:text-brand">{site.author.name}</a>, {site.author.role}{' · '}<time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>{` · ${post.data.readingMinutes} min de lectura`}
+        </p>
+      </header>
+
+      <aside class="mt-8 flex flex-col gap-3 rounded-2xl bg-brand-soft p-5 sm:flex-row sm:items-center sm:justify-between">
+        <p class="font-semibold text-ink">Practica mientras lees: descarga gratis la base de datos y 15 ejercicios SQL de entrevista.</p>
+        <a href={`/gratis?utm_source=blog&utm_medium=articulo&utm_campaign=${post.id}`} class="btn-cta shrink-0 whitespace-nowrap !min-h-11 !text-base">Descargar gratis</a>
+      </aside>
+
+      <div class="prose-blog mt-8">
+        <Content />
+      </div>
+    </article>
+
+    <section class="mt-12 flex flex-col gap-4 rounded-2xl border border-line bg-white p-6 sm:flex-row sm:items-start" aria-label="Sobre el autor">
+      <div aria-hidden="true" class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-navy text-2xl font-black text-accent">AL</div>
+      <div>
+        <p class="font-extrabold">{site.author.name}</p>
+        <p class="mt-1 leading-relaxed text-muted">Ingeniero Industrial y {site.author.role} en {site.author.city}. Trabaja con clientes en Estados Unidos y con un equipo de analítica. Escribe sobre cómo conseguir tu primer empleo en datos.</p>
+      </div>
+    </section>
+
+    <section class="mt-10 rounded-3xl bg-navy p-6 text-white sm:p-8" aria-labelledby="cta-blog">
+      <h2 id="cta-blog" class="text-2xl font-extrabold">15 ejercicios SQL de entrevista, gratis</h2>
+      <p class="mt-2 text-slate-300">Con base de datos de práctica y soluciones explicadas. Te los envío al correo.</p>
+      <div class="mt-5 max-w-md">
+        <LeadForm formId={formId} dark />
+      </div>
+    </section>
+
+    {related.length > 0 && (
+      <section class="mt-12" aria-labelledby="relacionados">
+        <h2 id="relacionados" class="text-xl font-extrabold">Sigue leyendo</h2>
+        <ul class="mt-4 grid gap-4 sm:grid-cols-2">
+          {related.map((r) => (
+            <li>
+              <a href={`/blog/${r.id}`} class="block h-full rounded-2xl border border-line bg-white p-5 hover:shadow-md">
+                <p class="font-bold leading-snug hover:text-brand">{r.data.title}</p>
+                <p class="mt-2 text-sm text-muted">{r.data.readingMinutes} min de lectura</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </main>
+  <Footer />
+</Base>

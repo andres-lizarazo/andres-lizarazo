@@ -61,7 +61,7 @@ Ordenados por costo y por impacto esperado:
 
 1. **Contenido orgánico constante** (LinkedIn + videos cortos + 1 YouTube semanal). Es el motor principal y es gratis.
 2. **Programa de afiliados** (ver `guia-afiliados.md`). Invita a 5 creadores por semana.
-3. **SEO:** escribe 1 artículo por semana en un blog dentro del mismo sitio, con búsquedas de cola larga en español:
+3. **SEO:** el blog ya tiene 10 artículos (`/blog`), cada uno con formulario de captura e imagen para compartir. Sigue con 1 artículo por semana (cómo publicarlo e ideas en `README.md`), apuntando a búsquedas de cola larga en español:
    - "preguntas de entrevista SQL"
    - "cómo ser analista de datos sin experiencia"
    - "proyectos de portafolio para analista de datos"
@@ -82,15 +82,25 @@ Ordenados por costo y por impacto esperado:
 
 | Producto | Precio | Formato |
 |---|---|---|
-| Kit Ruta Analista | USD 19 | Lo que tienes hoy |
-| Pack entrevistas en inglés | USD 9 | Order bump |
+| Kit Ruta Analista | USD 19 | Listo |
+| Pack entrevistas en inglés | USD 9 | Listo: order bump (ver `order-bump.md`) |
 | Curso en video "Proyecto de portafolio paso a paso" | USD 49 | Upsell |
 | Revisión de CV + portafolio 1 a 1 | USD 79–149 | Servicio con cupos limitados |
 | Cohorte de 6 semanas con acompañamiento | USD 199–299 | Programa en vivo |
 
 ## Panel de control (sin programar)
 
-Tu base de datos ya calcula el embudo por fuente. En una hoja de Google Sheets **privada**:
+**Lo más simple:** abre `https://rutaanalista.com/admin` desde el computador o el celular y entra con tu `ADMIN_TOKEN`. Ahí ves:
+
+- compradores frente a la meta de 1.000;
+- ingresos;
+- leads;
+- conversión;
+- el embudo por fuente.
+
+También descargas los CSV.
+
+Si prefieres trabajar los datos en una hoja de Google Sheets **privada**:
 
 ```
 =IMPORTDATA("https://rutaanalista.com/api/admin/export.csv?table=funnel&token=TU_ADMIN_TOKEN")
