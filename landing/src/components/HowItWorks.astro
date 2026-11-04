@@ -1,0 +1,18 @@
+---
+import { es } from '../content/es';
+const t = es.how;
+---
+<section class="section bg-navy text-white" aria-labelledby="como-title">
+  <div class="container-page">
+    <h2 id="como-title" class="h2 text-center">{t.title}</h2>
+    <ol class="mt-12 grid gap-6 md:grid-cols-3">
+      {t.steps.map((s, i) => (
+        <li class="rounded-2xl bg-navy-2 p-6 ring-1 ring-white/10">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-lg font-black text-accent-ink">{i + 1}</span>
+          <h3 class="mt-4 text-xl font-extrabold">{s.title}</h3>
+          <p class="mt-2 leading-relaxed text-slate-300">{s.text}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

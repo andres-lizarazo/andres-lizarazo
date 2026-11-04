@@ -1,0 +1,12 @@
+---
+interface Props { light?: boolean }
+const { light = false } = Astro.props;
+---
+<a href="/" class:list={['inline-flex items-center gap-2 font-extrabold tracking-tight text-lg', light ? 'text-white' : 'text-ink']}>
+  <svg aria-hidden="true" width="28" height="28" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="8" fill="#facc15" />
+    <path d="M8 22l5-6 4 3 7-9" fill="none" stroke="#0c1a2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="24" cy="10" r="2.4" fill="#0c1a2e" />
+  </svg>
+  <span>Ruta<span class:list={[light ? 'text-accent' : 'text-brand']}>Analista</span></span>
+</a>

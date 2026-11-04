@@ -1,0 +1,23 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { site } from '../config/site';
+---
+<Legal title="Términos y condiciones" description="Condiciones de uso y compra del Kit Ruta Analista." updated="noviembre de 2026">
+  <h2>1. El producto</h2>
+  <p>El {site.product.name} es un producto digital descargable (documentos PDF, hojas de cálculo, plantillas y bases de datos de práctica) con fines educativos. Se vende por ${site.product.price} {site.product.currency} en un pago único.</p>
+
+  <h2>2. Compra y entrega</h2>
+  <p>La compra se procesa a través de Hotmart, que actúa como plataforma de pago y entrega. Al aprobarse el pago, Hotmart te envía el acceso al correo que registraste. Si usas un medio de pago en efectivo, el acceso se envía cuando el pago se confirme.</p>
+
+  <h2>3. Garantía y reembolsos</h2>
+  <p>Tienes {site.product.guaranteeDays} días calendario desde la compra para solicitar el reembolso total desde tu cuenta de Hotmart, sin necesidad de dar explicaciones. Esto incluye el derecho de retracto previsto en el Estatuto del Consumidor (Ley 1480 de 2011).</p>
+
+  <h2>4. Licencia de uso</h2>
+  <p>La compra te da una licencia personal e intransferible. Puedes usar las plantillas para tu propio CV y portafolio, y publicar en tu GitHub los proyectos que construyas con ellas. No puedes revender, compartir públicamente ni redistribuir el kit o sus archivos.</p>
+
+  <h2>5. Sin garantía de resultados</h2>
+  <p>El kit es material educativo. Los resultados dependen de tu dedicación, tu contexto y el mercado laboral. No garantizamos entrevistas, empleos ni salarios específicos.</p>
+
+  <h2>6. Contacto</h2>
+  <p>Para soporte escribe a <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
+</Legal>

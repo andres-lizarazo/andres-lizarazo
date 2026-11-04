@@ -1,0 +1,28 @@
+{
+  "name": "ruta-analista-landing",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "check": "astro check",
+    "preview": "wrangler pages dev dist --port 8788",
+    "db:local": "wrangler d1 execute DB --local --file=schema.sql",
+    "db:remote": "wrangler d1 execute DB --remote --file=schema.sql",
+    "test": "vitest run",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@cloudflare/workers-types": "5.20261019.1",
+    "@tailwindcss/vite": "4.3.4",
+    "tailwindcss": "4.3.4",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5",
+    "wrangler": "4.151.2"
+  }
+}

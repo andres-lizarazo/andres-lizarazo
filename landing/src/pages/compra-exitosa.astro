@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../config/site';
+const shareText = encodeURIComponent(`Estoy usando el ${site.product.name} para conseguir mi primer empleo en datos: ${site.url}?utm_source=referido&utm_medium=whatsapp`);
+const shareUrl = encodeURIComponent(`${site.url}?utm_source=referido&utm_medium=linkedin`);
+const steps = [
+  { t: 'Abre el correo de Hotmart', d: 'Llega al email que usaste en la compra con el asunto de acceso a tu producto. Revisa Promociones o Spam si no lo ves.' },
+  { t: 'Descarga todo el kit', d: 'Guárdalo en una carpeta. Empieza por la guía “Ruta de 8 semanas”: te dice qué hacer primero.' },
+  { t: 'Agéndate la semana 1', d: 'Bloquea 1 hora al día en tu calendario. La constancia vale más que la intensidad.' },
+];
+---
+<Base title="¡Gracias por tu compra! · Ruta Analista" description="Tu acceso al Kit Ruta Analista va camino a tu correo." noindex>
+  <div class="bg-navy text-white">
+    <div class="container-page py-5"><Logo light /></div>
+    <main id="contenido" class="container-page max-w-3xl pb-14 pt-6 text-center">
+      <p class="eyebrow text-accent">Compra confirmada</p>
+      <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">¡Te damos la bienvenida a Ruta Analista!</h1>
+      <p class="mx-auto mt-4 max-w-xl text-lg text-slate-200">Hotmart te está enviando el acceso. Así empiezas hoy:</p>
+    </main>
+  </div>
+  <section class="section">
+    <div class="container-page max-w-3xl">
+      <ol class="space-y-4">
+        {steps.map((s, i) => (
+          <li class="flex gap-4 rounded-2xl border border-line bg-white p-5">
+            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent font-black text-accent-ink">{i + 1}</span>
+            <div><p class="font-extrabold">{s.t}</p><p class="mt-1 text-muted">{s.d}</p></div>
+          </li>
+        ))}
+      </ol>
+      <p class="mt-6 text-center text-sm text-muted">¿Problemas con el acceso? Escríbeme a <a class="font-semibold text-brand underline" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
+
+      <div class="mt-12 rounded-3xl bg-brand-soft p-7 text-center">
+        <h2 class="text-2xl font-extrabold">¿Conoces a alguien buscando su primer empleo en datos?</h2>
+        <p class="mt-2 text-muted">Compártele el kit. Le puede ahorrar meses.</p>
+        <div class="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
+          <a class="btn-cta" href={`https://wa.me/?text=${shareText}`} target="_blank" rel="noopener">Compartir por WhatsApp</a>
+          <a class="inline-flex min-h-[3.25rem] items-center justify-center rounded-xl border-2 border-ink px-6 font-extrabold" href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`} target="_blank" rel="noopener">Compartir en LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Base>

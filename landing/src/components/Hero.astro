@@ -1,0 +1,37 @@
+---
+import { es } from '../content/es';
+import Logo from './Logo.astro';
+import CheckoutButton from './CheckoutButton.astro';
+import KitMockup from './KitMockup.astro';
+const t = es.hero;
+---
+<header class="relative overflow-hidden bg-navy text-white">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-40" style="background: radial-gradient(60rem 30rem at 85% -10%, rgba(15,118,110,.55), transparent 60%), radial-gradient(40rem 24rem at -10% 110%, rgba(250,204,21,.18), transparent 60%);"></div>
+  <div class="container-page relative flex items-center justify-between py-5">
+    <Logo light />
+    <a href="#precio" class="hidden rounded-lg border border-white/25 px-4 py-2 text-sm font-semibold hover:bg-white/10 sm:inline-block">Ver precio</a>
+  </div>
+
+  <div id="contenido" class="container-page relative grid items-center gap-10 pb-16 pt-6 md:grid-cols-[1.3fr_.7fr] md:pb-24 md:pt-10">
+    <div>
+      <p class="eyebrow text-accent">{t.eyebrow}</p>
+      <h1 class="mt-4 text-[2.15rem] font-black leading-[1.06] tracking-tight text-balance sm:text-5xl lg:text-[3.3rem]">{t.title}</h1>
+      <p class="mt-5 max-w-xl text-lg leading-relaxed text-slate-200">{t.subtitle}</p>
+      <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <CheckoutButton label={t.cta} placement="hero" class="shrink-0 whitespace-nowrap sm:px-8" />
+        <a href="/gratis" class="text-center font-semibold text-white underline decoration-accent decoration-2 underline-offset-4 hover:text-accent sm:text-left">{t.secondary} →</a>
+      </div>
+      <ul class="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300">
+        {t.trust.map((item) => (
+          <li class="flex items-center gap-1.5">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="flex justify-center md:justify-end">
+      <KitMockup />
+    </div>
+  </div>
+</header>

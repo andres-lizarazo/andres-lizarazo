@@ -1,0 +1,15 @@
+---
+import { es } from '../content/es';
+import CheckoutButton from './CheckoutButton.astro';
+const t = es.finalCta;
+---
+<section class="section bg-navy text-white" aria-labelledby="final-title">
+  <div class="container-page max-w-3xl text-center">
+    <h2 id="final-title" class="h2">{t.title}</h2>
+    <p class="mt-4 text-lg text-slate-300">{t.text}</p>
+    <div class="mt-8 flex flex-col items-center gap-4">
+      <CheckoutButton label={t.cta} placement="final" class="whitespace-nowrap sm:px-10" />
+      <a href="/gratis" class="font-semibold text-white underline decoration-accent decoration-2 underline-offset-4 hover:text-accent">Prefiero empezar con los 15 ejercicios gratis</a>
+    </div>
+  </div>
+</section>

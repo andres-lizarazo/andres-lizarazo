@@ -1,0 +1,19 @@
+# Configuración de Cloudflare Pages (proyecto + Functions + base de datos D1).
+# Con este archivo, Cloudflare toma los bindings desde aquí (no desde el dashboard).
+name = "ruta-analista"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-10-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ruta-analista-db"
+# Reemplaza con el ID que te da: npx wrangler d1 create ruta-analista-db
+database_id = "00000000-0000-0000-0000-000000000000"
+
+# Variables NO secretas. Los secretos (BREVO_API_KEY, HOTMART_HOTTOK, ADMIN_TOKEN,
+# TURNSTILE_SECRET_KEY, IP_HASH_SALT) se cargan en el dashboard de Cloudflare o con
+#   npx wrangler pages secret put NOMBRE
+[vars]
+BREVO_LIST_LEADS = ""
+BREVO_LIST_BUYERS = ""
+BREVO_LIST_ABANDONED = ""

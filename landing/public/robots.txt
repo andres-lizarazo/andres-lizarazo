@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /gracias
+Disallow: /compra-exitosa
+
+Sitemap: https://rutaanalista.com/sitemap.xml

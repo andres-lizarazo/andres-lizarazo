@@ -1,0 +1,24 @@
+---
+import { es } from '../content/es';
+const t = es.problem;
+---
+<section class="section" aria-labelledby="problema-title">
+  <div class="container-page grid gap-10 md:grid-cols-2 md:gap-16">
+    <div>
+      <h2 id="problema-title" class="h2">{t.title}</h2>
+      <ul class="mt-8 space-y-4">
+        {t.items.map((item) => (
+          <li class="flex gap-3 rounded-xl border border-line bg-white p-4 shadow-sm">
+            <span aria-hidden="true" class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-100 text-sm font-black text-red-700">✕</span>
+            <span class="leading-relaxed">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="flex items-center">
+      <blockquote class="rounded-2xl bg-brand p-7 text-lg font-semibold leading-relaxed text-white shadow-lg md:p-9 md:text-xl">
+        {t.insight}
+      </blockquote>
+    </div>
+  </div>
+</section>

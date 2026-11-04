@@ -1,0 +1,20 @@
+{
+  "id": "6d2a4b8e-0000-4c1e-9f00-000000000001",
+  "creation_date": 1762214400000,
+  "event": "PURCHASE_APPROVED",
+  "version": "2.0.0",
+  "data": {
+    "product": { "id": 4321098, "ucode": "abc-123", "name": "Kit Ruta Analista" },
+    "buyer": { "email": "Comprador.Prueba@Example.com", "name": "Laura Gómez", "checkout_phone": "573000000000" },
+    "purchase": {
+      "approved_date": 1762214400000,
+      "full_price": { "value": 19, "currency_value": "USD" },
+      "price": { "value": 19, "currency_value": "USD" },
+      "offer": { "code": "lanzamiento" },
+      "status": "APPROVED",
+      "transaction": "HP1234567890",
+      "payment": { "type": "PIX", "installments_number": 1 },
+      "origin": { "src": "linkedin", "sck": "abc123def456" }
+    }
+  }
+}

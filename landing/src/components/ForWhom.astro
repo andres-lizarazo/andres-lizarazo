@@ -1,0 +1,30 @@
+---
+import { es } from '../content/es';
+const t = es.forWhom;
+---
+<section class="section" aria-label="Para quién es el kit">
+  <div class="container-page grid gap-6 md:grid-cols-2">
+    <div class="rounded-2xl border-2 border-brand bg-white p-7">
+      <h2 class="text-2xl font-extrabold">{t.yesTitle}</h2>
+      <ul class="mt-5 space-y-3">
+        {t.yes.map((item) => (
+          <li class="flex gap-3 leading-relaxed">
+            <svg aria-hidden="true" class="mt-1 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="rounded-2xl border border-line bg-white p-7">
+      <h2 class="text-2xl font-extrabold">{t.noTitle}</h2>
+      <ul class="mt-5 space-y-3 text-muted">
+        {t.no.map((item) => (
+          <li class="flex gap-3 leading-relaxed">
+            <svg aria-hidden="true" class="mt-1 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
