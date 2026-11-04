@@ -3,7 +3,7 @@ title: "Proyectos de portafolio para analista de datos: 7 ideas y cómo presenta
 description: "Ideas de proyectos de portafolio que se parecen al trabajo real de un analista de datos, la estructura que hace que destaquen y cómo publicarlos en GitHub."
 date: 2026-11-04
 keyword: "proyectos de portafolio analista de datos"
-readingMinutes: 5
+readingMinutes: 8
 ---
 
 Un reclutador ve decenas de portafolios por semana, y muchos tienen los mismos proyectos: Titanic, Netflix, Iris. No están mal para aprender, pero no te diferencian. Un buen **proyecto de portafolio para analista de datos** se parece al trabajo real: parte de una pregunta de negocio, la responde con datos y termina en una recomendación.
@@ -102,12 +102,48 @@ Una plantilla mínima de README:
 
 Publica un post por proyecto: la pregunta, 3 hallazgos con números, una recomendación y una imagen del dashboard. Agrega los proyectos en las secciones **Proyectos** y **Destacado** de tu perfil. Un post con un análisis real hace más por tu búsqueda que diez certificados.
 
+## Cómo presentar tu proyecto en una entrevista (en 2 minutos)
+
+Tarde o temprano te van a decir: "Cuéntame de un proyecto que hayas hecho". Esa pregunta es una oportunidad enorme si la preparas, porque tú eliges el tema. Usa esta estructura:
+
+1. **El problema (15 segundos):** "Quería entender si el crecimiento de una tienda online era rentable."
+2. **Los datos y el método (30 segundos):** "Trabajé con 8.500 pedidos en SQL: crucé pedidos, productos y costos, y calculé ingreso y margen por categoría y por mes."
+3. **El hallazgo principal (30 segundos):** "La segunda categoría en ventas era la de menor margen, así que una parte del crecimiento venía con poca rentabilidad."
+4. **La recomendación (20 segundos):** "Propuse revisar los descuentos en esa categoría y medir el margen semanal en un dashboard."
+5. **Lo que aprendiste o harías distinto (15 segundos):** "Si tuviera más tiempo, separaría el efecto de los descuentos del efecto del costo."
+
+Practícalo en voz alta hasta que te salga natural, sin leerlo. Y prepárate para las preguntas de seguimiento: "¿por qué elegiste esa métrica?", "¿qué supuestos hiciste?", "¿cómo validaste los datos?". Si el proyecto es tuyo, esas preguntas son fáciles.
+
+## Cuántos proyectos necesitas y en qué orden hacerlos
+
+**Tres proyectos bien hechos** son suficientes para empezar a postular. Más que la cantidad, importa que cubran áreas distintas del negocio. Un orden que funciona:
+
+1. **Ventas** primero, porque es el más intuitivo y te obliga a dominar JOINs, agregaciones y fechas.
+2. **Operaciones** (inventario o logística) después, porque muestra que entiendes procesos y costos.
+3. **Marketing o clientes** al final, porque usa conceptos más avanzados como cohortes, CAC y LTV. Si quieres adelantarte, aquí te explico el [análisis de cohortes con SQL](/blog/analisis-de-cohortes-sql) y las [métricas de negocio que debes dominar](/blog/metricas-de-negocio-analista-de-datos).
+
+Si ya sabes a qué industria quieres llegar (banca, retail, salud, logística), adapta al menos uno de los proyectos a esa industria. Un reclutador de una empresa de logística va a prestar mucha más atención a un análisis de tiempos de entrega que a uno de películas.
+
 ## Errores comunes
 
 - **Proyectos sin pregunta.** "Exploré el dataset" no es un proyecto; "descubrí por qué cayeron las ventas" sí.
 - **Hallazgos sin números.** "Las ventas mejoraron bastante" no convence; "+79% año contra año" sí.
 - **Dashboards recargados.** Si tiene 15 gráficos, nadie entiende el mensaje. Cuatro o cinco elementos bien elegidos son suficientes.
 - **Copiar un proyecto ajeno.** En la entrevista te van a preguntar por qué tomaste cada decisión. Tienes que poder responder.
+
+## Preguntas frecuentes
+
+**¿Sirven los proyectos con datos ficticios?**
+Sí, siempre que sean realistas y lo digas con claridad en el README. Lo que se evalúa es tu forma de pensar: la pregunta, el método, el hallazgo y la recomendación. Un dataset ficticio bien construido, con contexto de negocio, es mejor que uno real sin pregunta.
+
+**¿Tengo que usar Python?**
+No para un primer rol de analista. SQL y una herramienta de visualización (Excel, Power BI o Tableau) son suficientes para proyectos sólidos. Si ya sabes Python, úsalo en uno de los proyectos para mostrarlo, pero no a costa de la claridad.
+
+**¿Excel, Power BI o Tableau para el dashboard?**
+Usa la herramienta que más aparezca en las ofertas de tu país y de tu industria. En muchas empresas de Latinoamérica es Power BI o Excel. Lo importante es que el dashboard responda la pregunta del proyecto en una sola vista. Si no sabes cuál elegir, aquí comparo [SQL y Excel para análisis de datos](/blog/sql-vs-excel-analisis-de-datos).
+
+**¿Cuánto tiempo toma un proyecto?**
+Con una hora diaria, entre una y dos semanas por proyecto. El primero tarda más; el tercero suele salir en la mitad del tiempo.
 
 ## Siguiente paso
 

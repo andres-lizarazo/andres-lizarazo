@@ -36,7 +36,7 @@ El *order bump* es una casilla que aparece en el checkout de Hotmart, justo ante
 **Descripción:**
 > 50 preguntas reales de entrevista en inglés con respuestas modelo, frases para explicar datos, los falsos amigos que más delatan a los hispanohablantes y un simulacro guiado de 30 minutos. Ideal si apuntas a trabajo remoto con EE.UU.
 
-**Imagen:** usa una portada cuadrada del pack (puedes exportar la portada del PDF).
+**Imagen:** [`imagenes/portada-pack-ingles.png`](imagenes/portada-pack-ingles.png) (cuadrada, 1080 × 1080). Úsala también como imagen del producto del pack.
 
 4. **Medios de pago:** según Hotmart, **PSE no está disponible con order bump** (tarjeta y PayPal sí). Revisa en tu panel qué porcentaje de compradores paga con PSE:
    - Si es bajo, activa el order bump para todos.

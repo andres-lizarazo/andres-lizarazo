@@ -217,4 +217,6 @@ ORDER BY mes;
 
 Leer preguntas ayuda, pero lo que te prepara es **resolverlas tú**. Descarga gratis los [15 ejercicios SQL de entrevista](/gratis?utm_source=blog&utm_medium=articulo&utm_campaign=preguntas-sql), con la base de datos y las soluciones explicadas paso a paso.
 
+Para seguir preparándote: cómo es una [prueba técnica de analista de datos](/blog/prueba-tecnica-analista-de-datos) con un caso resuelto, las [preguntas de entrevista de Excel](/blog/preguntas-entrevista-excel-analista-de-datos) que más se repiten y el [análisis de cohortes con SQL](/blog/analisis-de-cohortes-sql), un clásico de las pruebas de e-commerce.
+
 Y si quieres el camino completo (60 ejercicios, 3 proyectos de portafolio, CV y preparación de entrevistas), mira el [Kit Ruta Analista](/?utm_source=blog&utm_medium=articulo&utm_campaign=preguntas-sql).

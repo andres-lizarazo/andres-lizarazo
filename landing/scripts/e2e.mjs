@@ -125,28 +125,46 @@ if (chromium) {
 }
 
 // ---------- Blog ----------
-await step('El índice del blog lista los 5 artículos', async () => {
+const blogSlugs = async () => {
+  const html = await (await api('/blog')).text();
+  return [...new Set((html.match(/href="\/blog\/([a-z0-9-]+)"/g) ?? []).map((h) => h.slice(12, -1)))];
+};
+
+await step('El índice del blog lista los mismos artículos que el sitemap', async () => {
   const r = await api('/blog');
   assert.equal(r.status, 200);
-  const links = new Set((await r.text()).match(/href="\/blog\/[a-z0-9-]+"/g) ?? []);
-  assert.ok(links.size >= 5, `solo ${links.size} artículos`);
+  const slugs = (await blogSlugs()).sort();
+  const xml = await (await api('/sitemap.xml')).text();
+  const inSitemap = [...new Set((xml.match(/\/blog\/([a-z0-9-]+)</g) ?? []).map((m) => m.slice(6, -1)))].sort();
+  assert.ok(slugs.length >= 10, `solo ${slugs.length} artículos`);
+  assert.deepEqual(slugs, inSitemap);
 });
 
-await step('Cada artículo responde 200, tiene JSON-LD y formulario propio', async () => {
-  const html = await (await api('/blog')).text();
-  const slugs = [...new Set((html.match(/href="\/blog\/([a-z0-9-]+)"/g) ?? []).map((h) => h.slice(12, -1)))];
-  for (const slug of slugs) {
+await step('Cada artículo responde 200, tiene JSON-LD, formulario e imagen para compartir propia', async () => {
+  for (const slug of await blogSlugs()) {
     const r = await api(`/blog/${slug}`);
     assert.equal(r.status, 200, slug);
     const page = await r.text();
     assert.ok(page.includes('"@type":"Article"'), `${slug} sin JSON-LD`);
     assert.ok(page.includes(`value="${`blog-${slug}`.slice(0, 40)}"`), `${slug} sin formulario`);
+    assert.ok(page.includes('<meta property="og:type" content="article"'), `${slug} sin og:type article`);
+    const og = page.match(/<meta property="og:image" content="([^"]+)"/)?.[1] ?? '';
+    assert.ok(og.endsWith(`/og/blog/${slug}.png`), `${slug} usa ${og}`);
+    const img = await api(`/og/blog/${slug}.png`);
+    assert.equal(img.status, 200, `${slug}.png no existe`);
+    assert.equal(img.headers.get('content-type'), 'image/png');
   }
 });
 
-await step('El sitemap incluye los artículos', async () => {
+await step('El sitemap y robots.txt dejan fuera las páginas privadas', async () => {
   const xml = await (await api('/sitemap.xml')).text();
-  assert.ok((xml.match(/\/blog\//g) ?? []).length >= 5);
+  assert.ok(!/\/(admin|gracias|compra-exitosa)</.test(xml));
+  const robots = await (await api('/robots.txt')).text();
+  assert.match(robots, /Disallow: \/admin/);
+  const adminPage = await api('/admin');
+  assert.equal(adminPage.status, 200);
+  assert.match(await adminPage.text(), /<meta name="robots" content="noindex, nofollow"/);
+  assert.match(adminPage.headers.get('x-robots-tag') ?? '', /noindex/);
 });
 
 // ---------- API ----------
@@ -244,6 +262,47 @@ await step('Resync responde aunque Brevo no esté configurado', async () => {
 await step('Track ignora tipos de evento no permitidos', async () => {
   assert.equal((await postJson('/api/track', { type: 'hack', anon_id: 'abc123' })).status, 204);
 });
+
+// ---------- Panel /admin (navegador) ----------
+if (chromium) {
+  await step('Panel /admin: pide token, rechaza uno malo, muestra KPI y embudo, descarga CSV y no mide visitas', async () => {
+    const browser = await chromium.launch();
+    const ctx = await browser.newContext({ acceptDownloads: true, viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+    const p = await ctx.newPage();
+    const tracked = [];
+    p.on('request', (req) => {
+      if (req.url().includes('/api/track')) tracked.push(req.url());
+    });
+    await p.goto(`${BASE}/admin`);
+    assert.ok(await p.isVisible('#login-form'));
+    assert.ok(await p.isHidden('#panel'));
+
+    await p.fill('#admin-token', 'token-incorrecto-1234567890');
+    await p.click('#login-form button[type="submit"]');
+    await p.waitForFunction(() => document.getElementById('login-error')?.textContent?.includes('incorrecto'));
+    assert.ok(await p.isHidden('#panel'));
+
+    await p.fill('#admin-token', ADMIN);
+    await p.click('#login-form button[type="submit"]');
+    await p.waitForSelector('#panel:not([hidden])');
+    assert.equal(await p.locator('#kpis > div').count(), 8);
+    const sources = await p.locator('#funnel th').allTextContents();
+    assert.ok(sources.includes('linkedin') && sources.includes('google'), `fuentes: ${sources.join(', ')}`);
+    assert.match(await p.textContent('#goal-pct'), /%$/);
+
+    const [download] = await Promise.all([p.waitForEvent('download'), p.click('[data-csv="leads"]')]);
+    assert.match(download.suggestedFilename(), /^leads-\d{4}-\d{2}-\d{2}\.csv$/);
+    const csv = readFileSync(await download.path(), 'utf8');
+    assert.ok(csv.includes(leadEmail), 'el CSV descargado no trae el lead');
+
+    await p.reload();
+    await p.waitForSelector('#panel:not([hidden])'); // el token sigue en la pestaña
+    await p.click('#logout');
+    assert.ok(await p.isVisible('#login-form'));
+    assert.equal(tracked.length, 0, 'el panel no debe enviar eventos de tracking');
+    await browser.close();
+  });
+}
 
 const failed = results.filter((r) => r[0] === '✘').length;
 console.log(`\n${results.length - failed}/${results.length} pruebas OK`);

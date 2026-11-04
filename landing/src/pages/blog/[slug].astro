@@ -1,5 +1,7 @@
 ---
 import { render } from 'astro:content';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import Base from '../../layouts/Base.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import Footer from '../../components/Footer.astro';
@@ -20,6 +22,9 @@ const { post, related } = Astro.props;
 const { Content } = await render(post);
 const url = new URL(`/blog/${post.id}`, site.url).toString();
 const formId = `blog-${post.id}`.slice(0, 40);
+// Imagen para compartir propia (npm run og:blog); si no existe, la general del sitio.
+const ownOg = `/og/blog/${post.id}.png`;
+const ogImage = existsSync(join(process.cwd(), 'public', ownOg)) ? ownOg : '/og.png';
 
 const jsonLd = [
   {
@@ -31,7 +36,7 @@ const jsonLd = [
     dateModified: (post.data.updated ?? post.data.date).toISOString(),
     author: { '@type': 'Person', name: site.author.name, jobTitle: site.author.role, url: site.author.linkedin },
     publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', site.url).toString() } },
-    image: new URL('/og.png', site.url).toString(),
+    image: new URL(ogImage, site.url).toString(),
     mainEntityOfPage: url,
     inLanguage: 'es',
   },
@@ -46,7 +51,7 @@ const jsonLd = [
   },
 ];
 ---
-<Base title={`${post.data.title} · Ruta Analista`} description={post.data.description}>
+<Base title={`${post.data.title} · Ruta Analista`} description={post.data.description} ogImage={ogImage} ogType="article">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <SiteHeader />
   <main id="contenido" class="container-page max-w-3xl py-10">

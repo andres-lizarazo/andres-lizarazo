@@ -61,7 +61,7 @@ Ordenados por costo y por impacto esperado:
 
 1. **Contenido orgánico constante** (LinkedIn + videos cortos + 1 YouTube semanal). Es el motor principal y es gratis.
 2. **Programa de afiliados** (ver `guia-afiliados.md`). Invita a 5 creadores por semana.
-3. **SEO:** escribe 1 artículo por semana en un blog dentro del mismo sitio, con búsquedas de cola larga en español:
+3. **SEO:** el blog ya tiene 10 artículos (`/blog`), cada uno con formulario de captura e imagen para compartir. Sigue con 1 artículo por semana (cómo publicarlo e ideas en `README.md`), apuntando a búsquedas de cola larga en español:
    - "preguntas de entrevista SQL"
    - "cómo ser analista de datos sin experiencia"
    - "proyectos de portafolio para analista de datos"
@@ -90,7 +90,17 @@ Ordenados por costo y por impacto esperado:
 
 ## Panel de control (sin programar)
 
-Tu base de datos ya calcula el embudo por fuente. En una hoja de Google Sheets **privada**:
+**Lo más simple:** abre `https://rutaanalista.com/admin` desde el computador o el celular y entra con tu `ADMIN_TOKEN`. Ahí ves:
+
+- compradores frente a la meta de 1.000;
+- ingresos;
+- leads;
+- conversión;
+- el embudo por fuente.
+
+También descargas los CSV.
+
+Si prefieres trabajar los datos en una hoja de Google Sheets **privada**:
 
 ```
 =IMPORTDATA("https://rutaanalista.com/api/admin/export.csv?table=funnel&token=TU_ADMIN_TOKEN")

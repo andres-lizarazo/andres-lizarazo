@@ -3,7 +3,7 @@ title: "Cómo ser analista de datos sin experiencia: la ruta paso a paso"
 description: "Qué aprender, qué ignorar y cómo demostrar lo que sabes para conseguir tu primer empleo como Analista de Datos, aunque vengas de otra carrera."
 date: 2026-11-04
 keyword: "como ser analista de datos sin experiencia"
-readingMinutes: 6
+readingMinutes: 7
 ---
 
 Querer ser analista de datos sin experiencia tiene un problema muy concreto: las ofertas piden experiencia, y para tener experiencia necesitas que alguien te contrate. La salida no es acumular más cursos. Es **construir evidencia**: proyectos que se parezcan al trabajo real y que puedas mostrar.
@@ -50,7 +50,7 @@ No es magia ni una promesa de empleo: es un orden que funciona.
 
 **Semana 7: CV, LinkedIn y primeras postulaciones.** CV de una página con tus proyectos arriba, perfil de LinkedIn optimizado y 10 postulaciones con un mensaje a alguien de cada empresa. Más detalles en [cómo hacer un CV de analista de datos](/blog/cv-analista-de-datos).
 
-**Semana 8: entrevistas.** Practica en voz alta las preguntas técnicas y de comportamiento, prepara 5 historias con el método STAR y haz un simulacro.
+**Semana 8: entrevistas.** Practica en voz alta las preguntas técnicas y de comportamiento, prepara 5 historias con el método STAR y haz un simulacro. Si te piden una prueba práctica, te explico cómo prepararla en [prueba técnica de analista de datos](/blog/prueba-tecnica-analista-de-datos).
 
 <div class="cta-inline">
 <p><strong>Empieza hoy con SQL:</strong> descarga gratis 15 ejercicios de entrevista con una base de datos real de e-commerce para practicar.</p>
@@ -76,6 +76,39 @@ Publica en LinkedIn lo que aprendes: una consulta, un gráfico, un error que com
 ### 4. Conversaciones, no solo postulaciones
 
 Postular sin hablar con nadie tiene una tasa de respuesta muy baja. Escribe mensajes cortos a analistas o reclutadores de las empresas que te interesan, pidiendo consejo (no trabajo). Tus exalumnos son el mejor punto de partida.
+
+Un mensaje que suele funcionar:
+
+> "Hola, Laura. Vi que trabajas como analista de datos en [empresa]. Estoy haciendo la transición desde [tu área] y publiqué un análisis de ventas con SQL y Power BI. ¿Te puedo hacer dos preguntas cortas sobre qué valoran en tu equipo para un perfil junior?"
+
+Es corto, muestra que hiciste algo y pide poco. Muchas de esas conversaciones terminan en un referido, que es la forma más efectiva de pasar el primer filtro.
+
+## Cómo saber si ya estás listo para postular
+
+La mayoría de las personas espera demasiado. Si cumples estos puntos, empieza a postular ya y sigue aprendiendo en paralelo:
+
+- [ ] Resuelves sin ayuda consultas con JOINs, `GROUP BY`, `CASE WHEN` y al menos `ROW_NUMBER` o `LAG`.
+- [ ] Haces una tabla dinámica y un `BUSCARX` sin buscar cómo.
+- [ ] Tienes al menos 2 proyectos publicados con hallazgos y recomendaciones.
+- [ ] Puedes explicar uno de tus proyectos en 2 minutos, en voz alta.
+- [ ] Sabes qué son el ticket promedio, el margen, la conversión y la retención. Si no, repasa las [métricas de negocio que todo analista debe dominar](/blog/metricas-de-negocio-analista-de-datos).
+- [ ] Tu CV tiene una página y logros con números.
+
+No necesitas saberlo todo. Las primeras entrevistas también son práctica: cada una te muestra qué reforzar.
+
+## Una semana típica de estudio (1 hora al día)
+
+| Día | Qué hacer |
+|---|---|
+| Lunes | 3 ejercicios de SQL nuevos |
+| Martes | Avance del proyecto: preguntas y consultas |
+| Miércoles | 3 ejercicios de SQL + repaso de los que fallaste |
+| Jueves | Avance del proyecto: dashboard o README |
+| Viernes | Excel: una tabla dinámica o una fórmula nueva con datos reales |
+| Sábado | Publicar en LinkedIn lo que aprendiste en la semana |
+| Domingo | Descanso o repaso ligero |
+
+La constancia gana a la intensidad: una hora diaria durante 8 semanas rinde más que 3 fines de semana maratónicos. Si dudas entre herramientas, aquí te explico [cuándo usar SQL y cuándo Excel](/blog/sql-vs-excel-analisis-de-datos).
 
 ## Errores que más retrasan a quien empieza
 

@@ -1,0 +1,52 @@
+name: Landing CI
+
+# Revisa la landing (landing/) en cada push o PR que la toque: pruebas, tipos y build.
+# Si un artículo del blog tiene mal el frontmatter, falla aquí antes de llegar a Cloudflare.
+on:
+  push:
+    paths:
+      - "landing/**"
+      - ".github/workflows/landing-ci.yml"
+  pull_request:
+    paths:
+      - "landing/**"
+      - ".github/workflows/landing-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: landing-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: landing
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: landing/.node-version
+          cache: npm
+          cache-dependency-path: landing/package-lock.json
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Pruebas unitarias
+        run: npm test
+
+      - name: Tipos (Astro)
+        run: npx astro check
+
+      - name: Tipos (Functions)
+        run: npx tsc -p functions
+
+      - name: Build
+        run: npm run build

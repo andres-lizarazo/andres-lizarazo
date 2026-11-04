@@ -22,7 +22,20 @@ Hotmart cobra, entrega el producto por email, gestiona reembolsos y maneja afili
 - [ ] **Garantía:** 7 días.
 - [ ] **Idioma:** español. Categoría: Educación / Tecnología.
 - [ ] **Página de ventas:** `https://rutaanalista.com`
-- [ ] **Imagen del producto:** usa `public/og.png` o una portada cuadrada del kit.
+- [ ] **Imagen del producto:** [`imagenes/portada-kit.png`](imagenes/portada-kit.png) (cuadrada, 1080 × 1080).
+- [ ] **Descripción del producto** (cópiala tal cual; Hotmart la muestra en el área de compra y en el mercado de afiliados):
+
+> **Kit Ruta Analista: tu primer empleo como Analista de Datos**
+>
+> Un plan de 8 semanas con todo lo que necesitas para pasar de "estoy aprendiendo" a "estoy listo para postular":
+>
+> - **Ruta de 8 semanas** con checklist imprimible: qué estudiar cada semana y qué ignorar.
+> - **60 ejercicios SQL resueltos** con una base de datos de e-commerce (8.528 pedidos): de SELECT a funciones de ventana, cohortes y RFM.
+> - **3 proyectos de portafolio guiados** (ventas, inventario y marketing) con consultas, dashboards en Excel y plantillas de README para GitHub.
+> - **CV en español e inglés** compatible con ATS, guía de LinkedIn, mensajes para reclutadores y tracker de postulaciones.
+> - **100 preguntas de entrevista** con respuestas modelo: técnicas, de negocio y de comportamiento.
+>
+> Hecho por un BI & Analytics Manager. Acceso inmediato y garantía de 7 días: si no te sirve, te devolvemos el dinero.
 
 ## 3. Checkout
 

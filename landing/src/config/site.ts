@@ -27,6 +27,9 @@ export const site = {
     checkoutUrl: env.PUBLIC_HOTMART_CHECKOUT_URL || 'https://pay.hotmart.com/REEMPLAZAR',
   },
 
+  // Meta de ventas (la usa el panel /admin para mostrar el avance).
+  goalBuyers: 1000,
+
   // Bonus de lanzamiento: SOLO actívalo si vas a cumplirlo. Desactívalo cuando se llenen los cupos.
   launchBonus: {
     enabled: true,

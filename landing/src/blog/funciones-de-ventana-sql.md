@@ -192,6 +192,6 @@ Dilo con un ejemplo de un proyecto tuyo y la respuesta pasa de correcta a memora
 
 ## Siguiente paso
 
-Lo que te prepara es practicar. Descarga los [15 ejercicios SQL gratis](/gratis?utm_source=blog&utm_medium=articulo&utm_campaign=ventanas) y repasa las [preguntas de entrevista SQL más comunes](/blog/preguntas-entrevista-sql-analista-de-datos).
+Lo que te prepara es practicar. Descarga los [15 ejercicios SQL gratis](/gratis?utm_source=blog&utm_medium=articulo&utm_campaign=ventanas) y repasa las [preguntas de entrevista SQL más comunes](/blog/preguntas-entrevista-sql-analista-de-datos). Cuando domines las ventanas, aplícalas a un caso completo con el [análisis de cohortes con SQL](/blog/analisis-de-cohortes-sql).
 
 El [Kit Ruta Analista](/?utm_source=blog&utm_medium=articulo&utm_campaign=ventanas) tiene 60 ejercicios resueltos, con un bloque completo de fechas y funciones de ventana, cohortes, RFM y LTV.
