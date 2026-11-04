@@ -162,6 +162,44 @@ La prueba e2e cubre:
 - **CSV seguro:** las celdas que empiezan por `=`, `+`, `-` o `@` se neutralizan para que nadie pueda inyectar fórmulas en tu Excel.
 - **Atribución:** primer contacto (UTM o `?ref=`) en `localStorage`. El link de Hotmart lleva `src` (fuente) y `sck` (id anónimo) para unir cada compra con su origen.
 
+## Blog: cómo publicar un artículo
+
+Los artículos están en `src/blog/`, uno por archivo `.md`. El nombre del archivo es la URL: `src/blog/mi-articulo.md` → `/blog/mi-articulo`.
+
+```markdown
+---
+title: "Título con la palabra clave (máx. 110 caracteres)"
+description: "Resumen de 70 a 170 caracteres; es lo que aparece en Google."
+date: 2026-11-04
+keyword: "palabra clave principal"
+readingMinutes: 6
+draft: false          # true = no se publica
+---
+
+Texto en Markdown. Los bloques ```sql se resaltan solos.
+```
+
+Cada artículo ya trae automáticamente:
+
+- datos estructurados para Google (`Article` y `BreadcrumbList`);
+- caja de autor;
+- botón al regalo gratis arriba y formulario de captura al final (`form_id = blog-<url>`);
+- 2 artículos relacionados;
+- entrada en el sitemap.
+
+Si quieres un llamado intermedio dentro del texto, usa este bloque HTML:
+
+```html
+<div class="cta-inline">
+<p><strong>Texto del llamado.</strong></p>
+<a href="/gratis?utm_source=blog&utm_medium=articulo&utm_campaign=mi-articulo">Descargar gratis →</a>
+</div>
+```
+
+**Atribución:** si alguien llega sin UTM, la fuente se deduce del referrer (Google → `google / organico`, LinkedIn → `linkedin / social`…). Así el embudo por fuente separa el tráfico orgánico del directo.
+
+**Ideas para los próximos artículos:** "SQL vs Excel para análisis de datos", "Power BI desde cero: tu primer dashboard", "Cómo prepararte para una prueba técnica de analista", "Qué es un análisis de cohortes" y "Preguntas de entrevista de Excel".
+
 ## Antes de publicar: afirmaciones que debes confirmar
 
 El texto usa información de tu README de GitHub. Confirma que todo sea exacto o ajústalo en `src/content/es.ts` y en `marketing/`:

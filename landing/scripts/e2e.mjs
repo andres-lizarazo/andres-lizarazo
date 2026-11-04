@@ -49,6 +49,7 @@ function parseCsv(text) {
 const exportTable = async (table) => parseCsv(await (await admin(`/api/admin/export.csv?table=${table}`)).text());
 
 const leadEmail = 'e2e-navegador@example.com';
+const blogEmail = 'e2e-blog@example.com';
 const approved = JSON.parse(readFileSync(new URL('../tests/fixtures/hotmart-approved.json', import.meta.url)));
 const tx = `HP-E2E-${RUN}`;
 
@@ -101,8 +102,52 @@ if (chromium) {
     assert.match(await page.textContent('[data-email-hint]'), /gmail\.com/);
   });
 
+  await step('Lead desde un artículo del blog con visita desde Google queda como orgánico', async () => {
+    // Contexto nuevo = visitante nuevo (sin atribución guardada)
+    const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+    const p2 = await ctx.newPage();
+    await p2.route('https://challenges.cloudflare.com/**', (r) => r.abort());
+    await p2.goto(`${BASE}/blog/funciones-de-ventana-sql`, { referer: 'https://www.google.com/' });
+    const form = p2.locator('form[data-lead-form]');
+    await form.locator('input[name="name"]').fill('Lectora Blog');
+    await form.locator('input[name="email"]').fill(blogEmail);
+    await form.locator('input[name="consent"]').check();
+    await Promise.all([p2.waitForURL(/\/gracias$/), form.locator('button[type="submit"]').click()]);
+    await ctx.close();
+    const row = (await exportTable('leads')).find((l) => l.email === blogEmail);
+    assert.ok(row, 'lead del blog no encontrado');
+    assert.equal(row.utm_source, 'google');
+    assert.equal(row.utm_medium, 'organico');
+    assert.equal(row.form_id, 'blog-funciones-de-ventana-sql');
+  });
+
   await browser.close();
 }
+
+// ---------- Blog ----------
+await step('El índice del blog lista los 5 artículos', async () => {
+  const r = await api('/blog');
+  assert.equal(r.status, 200);
+  const links = new Set((await r.text()).match(/href="\/blog\/[a-z0-9-]+"/g) ?? []);
+  assert.ok(links.size >= 5, `solo ${links.size} artículos`);
+});
+
+await step('Cada artículo responde 200, tiene JSON-LD y formulario propio', async () => {
+  const html = await (await api('/blog')).text();
+  const slugs = [...new Set((html.match(/href="\/blog\/([a-z0-9-]+)"/g) ?? []).map((h) => h.slice(12, -1)))];
+  for (const slug of slugs) {
+    const r = await api(`/blog/${slug}`);
+    assert.equal(r.status, 200, slug);
+    const page = await r.text();
+    assert.ok(page.includes('"@type":"Article"'), `${slug} sin JSON-LD`);
+    assert.ok(page.includes(`value="${`blog-${slug}`.slice(0, 40)}"`), `${slug} sin formulario`);
+  }
+});
+
+await step('El sitemap incluye los artículos', async () => {
+  const xml = await (await api('/sitemap.xml')).text();
+  assert.ok((xml.match(/\/blog\//g) ?? []).length >= 5);
+});
 
 // ---------- API ----------
 await step('Lead queda guardado con su fuente (UTM) y autorización', async () => {

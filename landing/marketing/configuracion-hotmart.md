@@ -31,9 +31,9 @@ Hotmart cobra, entrega el producto por email, gestiona reembolsos y maneja afili
 - [ ] **Personalización:** pon el logo y un color acorde (amarillo `#facc15` / azul oscuro `#0c1a2e`).
 - [ ] Copia el **link de pago** y ponlo en Cloudflare como `PUBLIC_HOTMART_CHECKOUT_URL` (luego vuelve a desplegar).
 
-### Order bump (cuando tengas el segundo producto)
+### Order bump (producto de USD 9, ya listo)
 
-- [ ] Producto de USD 9: "Pack de entrevistas en inglés" (preguntas y respuestas grabadas en audio + simulador).
+- [ ] Configura el "Pack de entrevistas en inglés" como order bump siguiendo [`order-bump.md`](order-bump.md) (textos listos para pegar).
 - [ ] Ojo: según Hotmart, **PSE no está disponible con order bump** (tarjeta y PayPal sí). Si muchos de tus compradores usan PSE, activa el order bump solo cuando hayas medido la proporción de cada medio de pago.
 
 ## 4. Webhook (para que tu base de datos registre las compras)

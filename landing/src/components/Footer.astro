@@ -9,7 +9,9 @@ const year = new Date().getFullYear();
       <Logo />
       <p>© {year} {site.author.name}. Hecho en {site.author.city}.</p>
     </div>
-    <nav aria-label="Legal" class="flex flex-wrap gap-x-5 gap-y-2">
+    <nav aria-label="Enlaces" class="flex flex-wrap gap-x-5 gap-y-2">
+      <a class="hover:text-ink underline-offset-4 hover:underline" href="/blog">Blog</a>
+      <a class="hover:text-ink underline-offset-4 hover:underline" href="/gratis">Ejercicios gratis</a>
       <a class="hover:text-ink underline-offset-4 hover:underline" href="/privacidad">Privacidad</a>
       <a class="hover:text-ink underline-offset-4 hover:underline" href="/terminos">Términos</a>
       <a class="hover:text-ink underline-offset-4 hover:underline" href={`mailto:${site.contactEmail}`}>Contacto</a>

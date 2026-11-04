@@ -82,8 +82,8 @@ Ordenados por costo y por impacto esperado:
 
 | Producto | Precio | Formato |
 |---|---|---|
-| Kit Ruta Analista | USD 19 | Lo que tienes hoy |
-| Pack entrevistas en inglés | USD 9 | Order bump |
+| Kit Ruta Analista | USD 19 | Listo |
+| Pack entrevistas en inglés | USD 9 | Listo: order bump (ver `order-bump.md`) |
 | Curso en video "Proyecto de portafolio paso a paso" | USD 49 | Upsell |
 | Revisión de CV + portafolio 1 a 1 | USD 79–149 | Servicio con cupos limitados |
 | Cohorte de 6 semanas con acompañamiento | USD 199–299 | Programa en vivo |
