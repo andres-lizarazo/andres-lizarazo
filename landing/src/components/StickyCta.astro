@@ -1,0 +1,31 @@
+---
+import { site } from '../config/site';
+import CheckoutButton from './CheckoutButton.astro';
+---
+<div data-sticky-cta class="fixed inset-x-0 bottom-0 z-40 translate-y-full border-t border-line bg-white/95 px-4 py-3 shadow-[0_-8px_24px_-12px_rgba(0,0,0,.25)] backdrop-blur transition-transform duration-200 md:hidden" aria-hidden="true">
+  <div class="flex items-center gap-3">
+    <div class="min-w-0 flex-1">
+      <p class="truncate text-sm font-extrabold">{site.product.name}</p>
+      <p class="text-xs text-muted">${site.product.price} USD · garantía {site.product.guaranteeDays} días</p>
+    </div>
+    <CheckoutButton label="Comprar" placement="sticky" class="!min-h-11 !px-5 !text-base" />
+  </div>
+</div>
+<script>
+  const bar = document.querySelector<HTMLElement>('[data-sticky-cta]');
+  const hero = document.querySelector('header');
+  const pricing = document.getElementById('precio');
+  if (bar && hero && 'IntersectionObserver' in window) {
+    let heroVisible = true;
+    let pricingVisible = false;
+    const update = () => {
+      const show = !heroVisible && !pricingVisible;
+      bar.classList.toggle('translate-y-full', !show);
+      bar.setAttribute('aria-hidden', String(!show));
+      bar.querySelectorAll('a').forEach((a) => (a.tabIndex = show ? 0 : -1));
+    };
+    new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; update(); }).observe(hero);
+    if (pricing) new IntersectionObserver(([e]) => { pricingVisible = e.isIntersecting; update(); }).observe(pricing);
+    update();
+  }
+</script>

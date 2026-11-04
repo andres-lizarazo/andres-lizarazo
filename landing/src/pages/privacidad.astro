@@ -1,0 +1,41 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { site } from '../config/site';
+---
+<Legal title="Política de tratamiento de datos personales" description="Cómo tratamos tus datos personales en Ruta Analista (Ley 1581 de 2012)." updated="noviembre de 2026">
+  <p>Esta política explica cómo {site.author.name} (en adelante, “Ruta Analista”), con domicilio en {site.author.city}, trata los datos personales que recibe a través de este sitio, conforme a la Ley 1581 de 2012, el Decreto 1377 de 2013 (compilado en el Decreto 1074 de 2015) y demás normas colombianas de protección de datos.</p>
+
+  <h2>1. Responsable del tratamiento</h2>
+  <p>Responsable: {site.author.name}. Correo de contacto: <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</p>
+
+  <h2>2. Datos que recolectamos</h2>
+  <ul>
+    <li>Nombre y correo electrónico que escribes en los formularios.</li>
+    <li>Datos de navegación agregados: página de origen, campaña (parámetros UTM), país aproximado y un identificador anónimo del navegador.</li>
+    <li>Si compras, Hotmart nos comparte tu nombre, correo y estado de la compra. Los datos de pago los procesa Hotmart; nosotros nunca vemos ni guardamos los datos de tu tarjeta.</li>
+  </ul>
+  <p>No recolectamos datos sensibles ni datos de menores de edad. Si eres menor de 18 años, no envíes tus datos.</p>
+
+  <h2>3. Finalidades</h2>
+  <ul>
+    <li>Enviarte el material gratuito que solicitaste.</li>
+    <li>Enviarte correos con contenido sobre carrera en datos y ofertas de nuestros productos.</li>
+    <li>Entregarte y darte soporte sobre los productos que compres.</li>
+    <li>Medir qué canales funcionan mejor (estadísticas internas).</li>
+  </ul>
+
+  <h2>4. Autorización</h2>
+  <p>Al marcar la casilla de autorización en el formulario, nos das tu consentimiento previo, expreso e informado para tratar tus datos con estas finalidades. Guardamos la fecha y la versión del texto que aceptaste como prueba de esa autorización.</p>
+
+  <h2>5. Encargados y transferencias</h2>
+  <p>Usamos proveedores que tratan datos por cuenta nuestra: Cloudflare (alojamiento y base de datos), Brevo (envío de correos) y Hotmart (pagos y entrega del producto). Algunos de ellos almacenan información fuera de Colombia, con medidas de seguridad adecuadas. No vendemos ni alquilamos tus datos.</p>
+
+  <h2>6. Tus derechos</h2>
+  <p>Puedes conocer, actualizar, rectificar y suprimir tus datos, revocar la autorización, pedir prueba de ella y presentar quejas ante la Superintendencia de Industria y Comercio. Para darte de baja de los correos, usa el enlace que aparece al final de cada correo. Para cualquier otra solicitud escribe a <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>; respondemos consultas en máximo 10 días hábiles y reclamos en máximo 15 días hábiles.</p>
+
+  <h2>7. Seguridad y conservación</h2>
+  <p>Guardamos los datos en servicios con cifrado en tránsito y acceso restringido. No guardamos tu dirección IP en claro, solo un código irreversible para prevenir abusos. Conservamos tus datos mientras estés suscrito o mientras sea necesario por obligaciones legales o contables.</p>
+
+  <h2>8. Cambios</h2>
+  <p>Si cambiamos esta política, publicaremos la nueva versión en esta página con su fecha.</p>
+</Legal>

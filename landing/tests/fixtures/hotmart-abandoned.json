@@ -1,0 +1,10 @@
+{
+  "id": "6d2a4b8e-0000-4c1e-9f00-000000000002",
+  "creation_date": 1762214500000,
+  "event": "PURCHASE_OUT_OF_SHOPPING_CART",
+  "version": "2.0.0",
+  "data": {
+    "product": { "id": 4321098, "name": "Kit Ruta Analista" },
+    "buyer": { "email": "lead@example.com", "name": "Lead Prueba" }
+  }
+}

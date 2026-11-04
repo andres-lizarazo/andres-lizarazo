@@ -1,0 +1,22 @@
+---
+// Solo se muestra si site.showTestimonials = true y hay testimonios reales (con permiso de cada persona).
+import { site } from '../config/site';
+import { testimonials } from '../content/testimonials';
+const show = site.showTestimonials && testimonials.length > 0;
+---
+{show && (
+  <section class="section bg-white" aria-labelledby="testimonios-title">
+    <div class="container-page">
+      <h2 id="testimonios-title" class="h2 text-center">Lo que dicen quienes ya lo usan</h2>
+      <ul class="mt-10 grid gap-5 md:grid-cols-3">
+        {testimonials.map((t) => (
+          <li class="flex flex-col rounded-2xl border border-line bg-paper p-6">
+            <p class="flex-1 leading-relaxed">“{t.quote}”</p>
+            <p class="mt-5 font-bold">{t.name}</p>
+            <p class="text-sm text-muted">{t.role}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}

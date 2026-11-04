@@ -1,0 +1,59 @@
+---
+import { site } from '../config/site';
+import { es } from '../content/es';
+
+interface Props {
+  formId: string;
+  submitLabel?: string;
+  dark?: boolean;
+}
+const { formId, submitLabel = es.leadForm.submit, dark = false } = Astro.props;
+const t = es.leadForm;
+const messages = JSON.stringify({ ...t.errors, sending: t.sending });
+const uid = `f-${formId}`;
+---
+
+<form
+  action="/api/subscribe"
+  method="post"
+  data-lead-form
+  data-messages={messages}
+  novalidate
+  class="flex flex-col gap-3"
+>
+  <input type="hidden" name="form_id" value={formId} />
+  <!-- Honeypot: invisible para personas, los bots lo llenan -->
+  <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+    <label for={`${uid}-website`}>No llenes este campo</label>
+    <input id={`${uid}-website`} type="text" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div>
+    <label for={`${uid}-name`} class:list={['mb-1 block text-sm font-semibold', dark ? 'text-white' : 'text-ink']}>{t.nameLabel}</label>
+    <input id={`${uid}-name`} class="field" type="text" name="name" autocomplete="given-name" required minlength="2" maxlength="80" />
+  </div>
+  <div>
+    <label for={`${uid}-email`} class:list={['mb-1 block text-sm font-semibold', dark ? 'text-white' : 'text-ink']}>{t.emailLabel}</label>
+    <input id={`${uid}-email`} class="field" type="email" name="email" autocomplete="email" inputmode="email" required maxlength="254" />
+    <!-- Espacio reservado: la sugerencia no mueve el resto del formulario (evita toques errados en el celular) -->
+    <p data-email-hint aria-live="polite" class:list={['mt-1 min-h-5 text-sm leading-5', dark ? 'text-accent' : 'text-brand']}></p>
+  </div>
+
+  <label class:list={['flex items-start gap-3 text-sm leading-snug', dark ? 'text-slate-200' : 'text-muted']}>
+    <input type="checkbox" name="consent" required class="mt-0.5 h-5 w-5 shrink-0 accent-[#0f766e]" />
+    <span>{t.consent} <a href="/privacidad" class="underline" target="_blank" rel="noopener">Ver política</a>.</span>
+  </label>
+
+  {site.turnstileSiteKey && <div class="cf-turnstile" data-sitekey={site.turnstileSiteKey} data-size="flexible" data-appearance="interaction-only" data-language="es"></div>}
+
+  <p data-form-error hidden role="alert" class="rounded-lg bg-red-50 px-3 py-2 text-sm font-semibold text-red-800"></p>
+
+  <button type="submit" class="btn-cta w-full">{submitLabel}</button>
+  <p class:list={['text-center text-xs', dark ? 'text-slate-300' : 'text-muted']}>Sin spam. Te das de baja con un clic.</p>
+</form>
+
+{site.turnstileSiteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+
+<script>
+  import '../scripts/lead-form';
+</script>

@@ -1,0 +1,9 @@
+# Copia este archivo a .dev.vars para desarrollo local (nunca lo subas a git).
+BREVO_API_KEY=
+BREVO_LIST_LEADS=
+BREVO_LIST_BUYERS=
+BREVO_LIST_ABANDONED=
+HOTMART_HOTTOK=hottok-de-prueba
+ADMIN_TOKEN=admin-de-prueba
+TURNSTILE_SECRET_KEY=
+IP_HASH_SALT=sal-local

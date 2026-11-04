@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+import { site } from '../config/site';
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+  ogImage?: string;
+}
+
+const { title, description, noindex = false, ogImage = '/og.png' } = Astro.props;
+const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', site.url).toString();
+const ogUrl = new URL(ogImage, site.url).toString();
+const pixelId = site.metaPixelId;
+const cfToken = site.cfAnalyticsToken;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="theme-color" content="#0c1a2e" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_LA" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {
+      pixelId && (
+        <script is:inline define:vars={{ pixelId }}>
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+          n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+          document,'script','https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', pixelId); fbq('track', 'PageView');
+        </script>
+      )
+    }
+    <slot name="head" />
+  </head>
+  <body class="min-h-screen">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2">Saltar al contenido</a>
+    <slot />
+    {
+      cfToken && (
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: cfToken })} />
+      )
+    }
+    <script>
+      import '../scripts/track';
+    </script>
+  </body>
+</html>

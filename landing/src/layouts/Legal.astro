@@ -1,0 +1,16 @@
+---
+import Base from './Base.astro';
+import Logo from '../components/Logo.astro';
+import Footer from '../components/Footer.astro';
+interface Props { title: string; description: string; updated: string }
+const { title, description, updated } = Astro.props;
+---
+<Base title={`${title} · Ruta Analista`} description={description}>
+  <div class="border-b border-line bg-white"><div class="container-page py-5"><Logo /></div></div>
+  <main id="contenido" class="container-page max-w-3xl py-12">
+    <h1 class="text-3xl font-black tracking-tight sm:text-4xl">{title}</h1>
+    <p class="mt-2 text-sm text-muted">Última actualización: {updated}</p>
+    <div class="prose-legal mt-8"><slot /></div>
+  </main>
+  <Footer />
+</Base>

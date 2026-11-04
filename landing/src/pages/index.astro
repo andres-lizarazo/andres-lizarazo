@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Problem from '../components/Problem.astro';
+import Includes from '../components/Includes.astro';
+import About from '../components/About.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import ForWhom from '../components/ForWhom.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Pricing from '../components/Pricing.astro';
+import Faq from '../components/Faq.astro';
+import FinalCta from '../components/FinalCta.astro';
+import StickyCta from '../components/StickyCta.astro';
+import Footer from '../components/Footer.astro';
+import { es } from '../content/es';
+import { site } from '../config/site';
+
+const productLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: site.product.name,
+  description: es.meta.description,
+  brand: { '@type': 'Brand', name: site.name },
+  offers: {
+    '@type': 'Offer',
+    price: site.product.price,
+    priceCurrency: site.product.currency,
+    availability: 'https://schema.org/InStock',
+    url: site.url,
+  },
+};
+---
+<Base title={es.meta.title} description={es.meta.description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(productLd)} />
+  <Hero />
+  <main>
+    <Problem />
+    <Includes />
+    <About />
+    <HowItWorks />
+    <ForWhom />
+    <Testimonials />
+    <Pricing />
+    <Faq />
+    <FinalCta />
+  </main>
+  <Footer />
+  <StickyCta />
+</Base>

@@ -1,0 +1,34 @@
+---
+import { es } from '../content/es';
+import { site } from '../config/site';
+const t = es.about;
+const initials = site.author.name.split(' ').map((p) => p[0]).join('').slice(0, 2);
+---
+<section class="section" aria-labelledby="sobre-title">
+  <div class="container-page grid items-start gap-10 md:grid-cols-[auto_1fr] md:gap-14">
+    <div class="flex flex-col items-center gap-3 md:items-start">
+      {site.author.photo ? (
+        <img src={site.author.photo} alt={`Foto de ${site.author.name}`} width="176" height="176" loading="lazy" class="h-44 w-44 rounded-3xl object-cover shadow-lg" />
+      ) : (
+        <div aria-hidden="true" class="flex h-44 w-44 items-center justify-center rounded-3xl bg-navy text-5xl font-black text-accent shadow-lg">{initials}</div>
+      )}
+      <a href={site.author.linkedin} target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-brand underline-offset-4 hover:underline">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+        Ver mi LinkedIn
+      </a>
+    </div>
+    <div>
+      <p class="eyebrow text-brand">Quién está detrás</p>
+      <h2 id="sobre-title" class="h2 mt-2">{t.title}</h2>
+      {t.paragraphs.map((p) => <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">{p}</p>)}
+      <ul class="mt-8 grid gap-4 sm:grid-cols-3">
+        {t.results.map((r) => (
+          <li class="rounded-2xl border border-line bg-white p-5">
+            <p class="text-3xl font-black tracking-tight text-brand">{r.value}</p>
+            <p class="mt-1 text-sm leading-snug text-muted">{r.label}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
