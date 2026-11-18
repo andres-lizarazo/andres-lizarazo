@@ -26,12 +26,14 @@ src/config/site.ts        ← precio, link de Hotmart, bonus, testimonios (empie
 src/content/es.ts         ← todo el texto de la página de venta
 src/content/testimonials.ts
 src/components/           ← secciones de la página
-src/pages/                ← /, /gratis, /gracias, /compra-exitosa, /privacidad, /terminos
+src/pages/                ← /, /gratis, /gracias, /compra-exitosa, /privacidad, /terminos, /blog, /admin
+src/blog/                 ← artículos del blog (Markdown)
 src/scripts/track.ts      ← UTM, id anónimo, link de pago decorado, eventos
 functions/api/            ← subscribe, track, webhooks/hotmart, admin (stats, export, resync)
 schema.sql                ← tablas de la base de datos
 public/descargas/         ← lead magnet gratis (PDF + base SQLite + CSV)
-marketing/                ← emails, calendario de contenido, Hotmart, afiliados y plan de lanzamiento
+public/og/blog/           ← imagen para compartir de cada artículo (npm run og:blog)
+marketing/                ← emails, calendario, carruseles, guiones de YouTube, Hotmart, afiliados y plan de lanzamiento
 tests/ · scripts/e2e.mjs  ← pruebas
 ```
 
@@ -104,6 +106,8 @@ Sigue `marketing/configuracion-hotmart.md`: producto, checkout, redirección a `
 
 ### 7. Verifica
 
+Abre `https://rutaanalista.com/admin` y entra con tu `ADMIN_TOKEN`: es el panel de métricas (ver más abajo). Desde la terminal también puedes consultar el API:
+
 ```bash
 # Resumen (leads, compras, embudo por fuente)
 curl -H "Authorization: Bearer TU_ADMIN_TOKEN" https://rutaanalista.com/api/admin/stats
@@ -114,6 +118,23 @@ curl -H "Authorization: Bearer TU_ADMIN_TOKEN" "https://rutaanalista.com/api/adm
 # Reintentar la sincronización con Brevo de lo que haya quedado pendiente
 curl -X POST -H "Authorization: Bearer TU_ADMIN_TOKEN" https://rutaanalista.com/api/admin/resync
 ```
+
+## Panel de métricas (/admin)
+
+`https://tudominio.com/admin` muestra:
+
+- compradores frente a la meta de 1.000 (se cambia en `goalBuyers`, en `src/config/site.ts`);
+- ingresos aprobados por moneda;
+- leads (total y de los últimos 7 días), conversión de lead a compra y del checkout, carritos abandonados, reembolsos y pendientes de Brevo;
+- el **embudo por fuente**: leads, clics en comprar, compradores y conversión de cada canal.
+
+Desde ahí también descargas los CSV y reintentas la sincronización con Brevo.
+
+**Seguridad:**
+
+- La página no contiene datos ni se indexa. Todo llega del API protegido con tu `ADMIN_TOKEN`.
+- El token se guarda solo en la pestaña (`sessionStorage`) y se borra al cerrarla.
+- Las fuentes (UTM) las puede escribir cualquier visitante, así que el panel las muestra siempre como texto, nunca como HTML.
 
 ## Desarrollo local
 
@@ -136,6 +157,8 @@ npx tsc -p functions
 npm run e2e       # punta a punta contra npm run preview (requiere Playwright)
 ```
 
+**CI:** GitHub Actions (`.github/workflows/landing-ci.yml`) corre pruebas, tipos y build en cada push o PR que toque `landing/`. Si un artículo tiene mal el frontmatter, lo verás en rojo antes de que llegue a Cloudflare.
+
 La prueba e2e cubre:
 
 - el formulario en el celular;
@@ -145,7 +168,8 @@ La prueba e2e cubre:
 - el honeypot;
 - el envío sin JavaScript;
 - el webhook (firma, idempotencia, reembolso, eventos desordenados y carrito abandonado);
-- el panel de administración.
+- el panel de administración (API y página `/admin`);
+- el blog (índice, artículos, imagen propia, sitemap) y la atribución orgánica.
 
 ## Cómo funciona por dentro
 
@@ -162,6 +186,46 @@ La prueba e2e cubre:
 - **CSV seguro:** las celdas que empiezan por `=`, `+`, `-` o `@` se neutralizan para que nadie pueda inyectar fórmulas en tu Excel.
 - **Atribución:** primer contacto (UTM o `?ref=`) en `localStorage`. El link de Hotmart lleva `src` (fuente) y `sck` (id anónimo) para unir cada compra con su origen.
 
+## Blog: cómo publicar un artículo
+
+Los artículos están en `src/blog/`, uno por archivo `.md`. El nombre del archivo es la URL: `src/blog/mi-articulo.md` → `/blog/mi-articulo`.
+
+```markdown
+---
+title: "Título con la palabra clave (máx. 110 caracteres)"
+description: "Resumen de 70 a 170 caracteres; es lo que aparece en Google."
+date: 2026-11-04
+keyword: "palabra clave principal"
+readingMinutes: 6
+draft: false          # true = no se publica
+---
+
+Texto en Markdown. Los bloques ```sql se resaltan solos.
+```
+
+Cada artículo ya trae automáticamente:
+
+- datos estructurados para Google (`Article` y `BreadcrumbList`);
+- caja de autor;
+- botón al regalo gratis arriba y formulario de captura al final (`form_id = blog-<url>`);
+- 2 artículos relacionados;
+- entrada en el sitemap.
+
+Si quieres un llamado intermedio dentro del texto, usa este bloque HTML:
+
+```html
+<div class="cta-inline">
+<p><strong>Texto del llamado.</strong></p>
+<a href="/gratis?utm_source=blog&utm_medium=articulo&utm_campaign=mi-articulo">Descargar gratis →</a>
+</div>
+```
+
+**Atribución:** si alguien llega sin UTM, la fuente se deduce del referrer (Google → `google / organico`, LinkedIn → `linkedin / social`…). Así el embudo por fuente separa el tráfico orgánico del directo.
+
+**Imagen para compartir:** después de crear el artículo, ejecuta `npm run og:blog` (requiere Playwright). Crea `public/og/blog/<url>.png` con el título, que es la imagen que muestran LinkedIn y WhatsApp al compartir el link. Si cambias un título, usa `npm run og:blog -- --all`. Sin imagen propia, el artículo usa `/og.png`.
+
+**Ideas para los próximos artículos:** "Power BI desde cero: tu primer dashboard", "Limpieza de datos con SQL", "Estadística básica para analistas de datos", "Python para analistas: qué aprender primero" y "Cómo diseñar un dashboard que se entienda en 30 segundos".
+
 ## Antes de publicar: afirmaciones que debes confirmar
 
 El texto usa información de tu README de GitHub. Confirma que todo sea exacto o ajústalo en `src/content/es.ts` y en `marketing/`:
@@ -177,6 +241,6 @@ El texto usa información de tu README de GitHub. Confirma que todo sea exacto o
 ## Próximos pasos técnicos (cuando haya tracción)
 
 - Página `/en` en inglés (la estructura de contenido ya está separada en `src/content/`).
-- Blog con Astro Content Collections para SEO.
-- Order bump y upsell (configuración en Hotmart, sin código).
+- Upsell de USD 49 (curso en video): se configura en Hotmart, sin código.
 - Pruebas A/B del título: duplica `index.astro` y reparte el tráfico con un parámetro de la campaña.
+- Actualizar `wrangler` cuando haya una versión con al menos 2 semanas de publicada que corrija el aviso de `npm audit` sobre `undici`. Solo afecta al servidor de desarrollo local, no al sitio publicado.

@@ -12,3 +12,10 @@
 /descargas/*
   Cache-Control: public, max-age=3600
   X-Robots-Tag: noindex
+
+/admin
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/og/*
+  Cache-Control: public, max-age=86400

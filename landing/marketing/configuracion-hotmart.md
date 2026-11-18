@@ -22,7 +22,20 @@ Hotmart cobra, entrega el producto por email, gestiona reembolsos y maneja afili
 - [ ] **Garantía:** 7 días.
 - [ ] **Idioma:** español. Categoría: Educación / Tecnología.
 - [ ] **Página de ventas:** `https://rutaanalista.com`
-- [ ] **Imagen del producto:** usa `public/og.png` o una portada cuadrada del kit.
+- [ ] **Imagen del producto:** [`imagenes/portada-kit.png`](imagenes/portada-kit.png) (cuadrada, 1080 × 1080).
+- [ ] **Descripción del producto** (cópiala tal cual; Hotmart la muestra en el área de compra y en el mercado de afiliados):
+
+> **Kit Ruta Analista: tu primer empleo como Analista de Datos**
+>
+> Un plan de 8 semanas con todo lo que necesitas para pasar de "estoy aprendiendo" a "estoy listo para postular":
+>
+> - **Ruta de 8 semanas** con checklist imprimible: qué estudiar cada semana y qué ignorar.
+> - **60 ejercicios SQL resueltos** con una base de datos de e-commerce (8.528 pedidos): de SELECT a funciones de ventana, cohortes y RFM.
+> - **3 proyectos de portafolio guiados** (ventas, inventario y marketing) con consultas, dashboards en Excel y plantillas de README para GitHub.
+> - **CV en español e inglés** compatible con ATS, guía de LinkedIn, mensajes para reclutadores y tracker de postulaciones.
+> - **100 preguntas de entrevista** con respuestas modelo: técnicas, de negocio y de comportamiento.
+>
+> Hecho por un BI & Analytics Manager. Acceso inmediato y garantía de 7 días: si no te sirve, te devolvemos el dinero.
 
 ## 3. Checkout
 
@@ -31,9 +44,9 @@ Hotmart cobra, entrega el producto por email, gestiona reembolsos y maneja afili
 - [ ] **Personalización:** pon el logo y un color acorde (amarillo `#facc15` / azul oscuro `#0c1a2e`).
 - [ ] Copia el **link de pago** y ponlo en Cloudflare como `PUBLIC_HOTMART_CHECKOUT_URL` (luego vuelve a desplegar).
 
-### Order bump (cuando tengas el segundo producto)
+### Order bump (producto de USD 9, ya listo)
 
-- [ ] Producto de USD 9: "Pack de entrevistas en inglés" (preguntas y respuestas grabadas en audio + simulador).
+- [ ] Configura el "Pack de entrevistas en inglés" como order bump siguiendo [`order-bump.md`](order-bump.md) (textos listos para pegar).
 - [ ] Ojo: según Hotmart, **PSE no está disponible con order bump** (tarjeta y PayPal sí). Si muchos de tus compradores usan PSE, activa el order bump solo cuando hayas medido la proporción de cada medio de pago.
 
 ## 4. Webhook (para que tu base de datos registre las compras)

@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import Footer from '../../components/Footer.astro';
+import { getPosts, formatDate } from '../../lib/blog';
+
+const posts = await getPosts();
+---
+<Base
+  title="Blog de Ruta Analista: SQL, portafolio y empleo en datos"
+  description="Guías prácticas para conseguir tu primer empleo como Analista de Datos: SQL para entrevistas, proyectos de portafolio, CV y ruta de estudio."
+>
+  <SiteHeader />
+  <main id="contenido" class="container-page max-w-4xl py-12">
+    <p class="eyebrow text-brand">Blog</p>
+    <h1 class="mt-2 text-4xl font-black tracking-tight sm:text-5xl">Guías para tu primer empleo en datos</h1>
+    <p class="mt-4 max-w-2xl text-lg text-muted">SQL para entrevistas, proyectos de portafolio, CV y la ruta para empezar. Todo con ejemplos que puedes practicar con la base de datos gratis.</p>
+    <ul class="mt-10 grid gap-5">
+      {posts.map((p) => (
+        <li>
+          <a href={`/blog/${p.id}`} class="group block rounded-2xl border border-line bg-white p-6 transition-shadow hover:shadow-md">
+            <p class="text-sm text-muted">{formatDate(p.data.date)} · {p.data.readingMinutes} min de lectura</p>
+            <h2 class="mt-2 text-xl font-extrabold leading-snug group-hover:text-brand sm:text-2xl">{p.data.title}</h2>
+            <p class="mt-2 leading-relaxed text-muted">{p.data.description}</p>
+            <span class="mt-3 inline-block font-semibold text-brand">Leer artículo →</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+  <Footer />
+</Base>

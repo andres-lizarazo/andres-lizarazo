@@ -99,3 +99,28 @@
   .prose-legal ul { list-style: disc; padding-left: 1.25rem; }
   .prose-legal a { color: var(--color-brand); text-decoration: underline; }
 }
+
+/* ---------- Artículos del blog ---------- */
+@layer components {
+  .prose-blog { font-size: 1.0625rem; line-height: 1.75; color: #1f2937; }
+  .prose-blog > * + * { margin-top: 1.15em; }
+  .prose-blog h2 { margin-top: 2.2em; font-size: 1.6rem; line-height: 1.25; font-weight: 800; letter-spacing: -0.015em; color: var(--color-ink); text-wrap: balance; }
+  .prose-blog h3 { margin-top: 1.8em; font-size: 1.25rem; line-height: 1.35; font-weight: 800; color: var(--color-ink); }
+  .prose-blog h2 + *, .prose-blog h3 + * { margin-top: 0.6em; }
+  .prose-blog a { color: var(--color-brand); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .prose-blog strong { color: var(--color-ink); font-weight: 700; }
+  .prose-blog ul { list-style: disc; padding-left: 1.4em; }
+  .prose-blog ol { list-style: decimal; padding-left: 1.4em; }
+  .prose-blog li + li { margin-top: 0.4em; }
+  .prose-blog li::marker { color: var(--color-brand); }
+  .prose-blog blockquote { border-left: 4px solid var(--color-accent); background: #fffbeb; padding: 0.9em 1.1em; border-radius: 0 0.75rem 0.75rem 0; color: #374151; }
+  .prose-blog :not(pre) > code { background: #eef2f7; color: #0b1220; padding: 0.12em 0.4em; border-radius: 0.35rem; font-size: 0.9em; }
+  .prose-blog pre { overflow-x: auto; padding: 1em 1.1em; border-radius: 0.9rem; font-size: 0.875rem; line-height: 1.6; }
+  .prose-blog table { width: 100%; border-collapse: collapse; font-size: 0.95rem; display: block; overflow-x: auto; }
+  .prose-blog th { background: #e2e8f0; text-align: left; font-weight: 700; padding: 0.55em 0.8em; white-space: nowrap; }
+  .prose-blog td { border-bottom: 1px solid var(--color-line); padding: 0.55em 0.8em; vertical-align: top; }
+  .prose-blog hr { border: 0; border-top: 1px solid var(--color-line); margin: 2.5em 0; }
+  .prose-blog .cta-inline { border: 2px solid var(--color-accent); background: #fff; border-radius: 1rem; padding: 1.1em 1.25em; }
+  .prose-blog .cta-inline p { margin: 0; }
+  .prose-blog .cta-inline a { display: inline-block; margin-top: 0.5em; }
+}

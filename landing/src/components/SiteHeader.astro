@@ -1,0 +1,14 @@
+---
+// Encabezado claro para páginas internas (blog).
+import Logo from './Logo.astro';
+---
+<header class="border-b border-line bg-white">
+  <div class="container-page flex items-center justify-between py-4">
+    <Logo />
+    <nav aria-label="Principal" class="flex items-center gap-4 text-sm font-semibold">
+      <a href="/blog" class="hover:text-brand">Blog</a>
+      <a href="/gratis" class="hidden hover:text-brand sm:inline">15 ejercicios gratis</a>
+      <a href="/" class="rounded-lg bg-navy px-3 py-2 text-white hover:bg-navy-2">Ver el kit</a>
+    </nav>
+  </div>
+</header>
