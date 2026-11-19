@@ -89,6 +89,15 @@ openssl rand -hex 24
 
 5. **Custom domains:** agrega tu dominio.
 
+**Alternativa sin conectar Git (subida directa desde tu computador):**
+
+```bash
+npx wrangler pages project create ruta-analista --production-branch main
+SITE_URL=https://ruta-analista.pages.dev npm run deploy
+```
+
+Queda publicado en `https://ruta-analista.pages.dev`. Cuando compres el dominio, agrégalo en **Custom domains** y vuelve a desplegar con `SITE_URL=https://rutaanalista.com`. Los secretos se cargan con `npx wrangler pages secret put NOMBRE --project-name ruta-analista`.
+
 ### 4. Brevo
 
 1. **Senders, Domains & Dedicated IPs → Domains:** agrega tu dominio y autentícalo (SPF, DKIM, DMARC). Si el dominio está en Cloudflare, Brevo puede crear los registros automáticamente. **Sin este paso, tus correos llegan a spam.**
@@ -243,4 +252,4 @@ El texto usa información de tu README de GitHub. Confirma que todo sea exacto o
 - Página `/en` en inglés (la estructura de contenido ya está separada en `src/content/`).
 - Upsell de USD 49 (curso en video): se configura en Hotmart, sin código.
 - Pruebas A/B del título: duplica `index.astro` y reparte el tráfico con un parámetro de la campaña.
-- Actualizar `wrangler` cuando haya una versión con al menos 2 semanas de publicada que corrija el aviso de `npm audit` sobre `undici`. Solo afecta al servidor de desarrollo local, no al sitio publicado.
+- `npm audit` muestra un aviso de Astro sobre el endpoint de imágenes de `@astrojs/node`. No aplica: este sitio no usa ese adaptador.
